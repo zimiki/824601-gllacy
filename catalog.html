@@ -10,7 +10,7 @@
         <div class="index-logo"><img src="img/ingex-logo.png" width="10" height="10" alt="GllasyShop"></div>
         <nav class="header-navigation">   
             <ul class="site-navigation">
-                <li><a href="#">Каталог</a>
+                <li><a class="navigation-active" href="#">Каталог</a>
                     <ul class="type-navigation">
                         <li class="new-type"><a href="#">Новинки</a></li>
                         <li><a href="#">Сливочное</a></li>
@@ -59,113 +59,113 @@
     </header>
 <!--.........................MAIN..................................-->
     <main>
-        
-        <h1 class="visually-hidden">Магазин Глейси</h1>
-        <section class="main-slider">            
-            <div class="main-slider-info">
+        <div>
+            <ul class="breadcrumbs">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="#">Каталог</a></li>
+                <li>Сливочное</li>                
+            </ul>
+        </div> 
+        <div class="main-slider-info">
                 <p>С 10 до 20, ежедневно</p>
                 <b>8 812 450-25-25</b>
-            </div> 
-            <h2 class="visually-hidden">Слайдер с продуктами</h2>
-            <div class="slide slide-1">
-                <p>Крем-брюле и пломбир с малиновым джемом</p>
-                <a class="btn-red" href="#">Давайте оба!</a>
-            </div>
-            <div class="slide slide-2">                
-                <p>Шоколадный пломбир и лимонный сорбет</p>
-                <a class="btn-red" href="#">Давайте оба!</a>
-            </div>
-            <div class="slide slide-3">                
-                <p>Пломбир с помадкой и клубничный щербет</p>
-                <a class="btn-red" href="#">Давайте оба!</a>
-            </div>            
+        </div> 
+        <h1>Сливочное мороженное</h1>
+        
+        <section class="filters">            
+            <h2 class="visually-hidden">Фильтр товаров</h2>
+            <!--....тут будет форма  для фильтров..........-->
         </section>
         
-        <section class="main-promo">
-            <h2 class="visually-hidden">Промо акции</h2>
-            <div class="main-promo-raspberries">
-                <b>Малинка даром!</b>
-                <p>При покупке 2 кг любого фруктового мороженного, добавим 
-                    в ваш заказ банку малинового варенья бесплатно</p>
-                <a class="btn-red" href="#">Хочу варенье!</a>
-            </div>
-            <div class="main-promo-chocolate">
-                <b>Шоколадки даром!</b>
-                <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку
-                    вкуснейшей шоколадной присыпки совершенно бесплатно</p>
-                <a class="btn-red" href="#">Хочу шоколадки!</a>
-            </div>
-        </section>
-        
-        <section class="catalog">
-            <h2 class="visually-hidden">Хиты продаж</h2>        
+        <section class="catalog">            
+            <h2 class="visually-hidden">Список товаров</h2>
             <ul class="catalog-list">
-                <li class="catalog-item hit">
+                <li class="catalog-item">
                     <h3><a class="product-title" href="#">Сливочное с апельсиновым джемом и цитросовой стружкой</a></h3>
                     <p><img src="img/icecream-orange.png" width="10" height="10" alt="Сливочное с апельсиновым джемом и цитросовой стружкой"></p>
                     <p class="product-price">310 <span>/кг</span></p>
                     <a class="btn-red" href="#">Быстрый просмотр</a>
                 </li>
-                <li class="catalog-item hit">
+                <li class="catalog-item">
                     <h3><a class="product-title" href="#">Сливочное кофейное с кусочками шоколада</a></h3>
                     <p><img src="img/icecream-coffee.png" width="10" height="10" alt="Сливочное кофейное с кусочками шоколада"></p>
                     <p class="product-price">380 <span>/кг</span></p>
                     <a class="btn-red" href="#">Быстрый просмотр</a>
                 </li>
-                  <li class="catalog-item hit">
+                  <li class="catalog-item">
                     <h3><a class="product-title" href="#">Сливочно-клубничное с присыпкой из белого шоколада</a></h3>
                     <p><img src="img/icecream-strawberry.png" width="10" height="10" alt="Сливочно-клубничное с присыпкой из белого шоколада"></p>
                     <p class="product-price">355 <span>/кг</span></p>
                     <a class="btn-red" href="#">Быстрый просмотр</a>
                 </li>
-                <li class="catalog-item hit">
+                <li class="catalog-item">
                     <h3><a class="product-title" href="#">Сливочное крем-брюле с карамельной подливкой</a></h3>
                     <p><img src="img/icecream-сremebrulee.png" width="10" height="10" alt="Сливочное крем-брюле с карамельной подливкой"></p>
                     <p class="product-price">415 <span>/кг</span></p>
                     <a class="btn-red" href="#">Быстрый просмотр</a>
                 </li>
+                <li class="catalog-item">
+                    <h3><a class="product-title" href="#">Сливочное с брусничным джемом</a></h3>
+                    <p><img src="img/icecream-foxberry.png" width="10" height="10" alt="Сливочное с брусничным джемом"></p>
+                    <p class="product-price">325 <span>/кг</span></p>
+                    <a class="btn-red" href="#">Быстрый просмотр</a>
+                </li>
+                <li class="catalog-item">
+                    <h3><a class="product-title" href="#">Сливочное-черничное с цельным шоколадом</a></h3>
+                    <p><img src="img/icecream-blueberries.png" width="10" height="10" alt="Сливочное-черничное с цельным шоколадом"></p>
+                    <p class="product-price">410 <span>/кг</span></p>
+                    <a class="btn-red" href="#">Быстрый просмотр</a>
+                </li>
+                  <li class="catalog-item">
+                    <h3><a class="product-title" href="#">Сливочно-лимонное с карамельной присыпкой</a></h3>
+                    <p><img src="img/icecream-lemon.png" width="10" height="10" alt="Сливочно-лимонное с карамельной присыпкой"></p>
+                    <p class="product-price">375 <span>/кг</span></p>
+                    <a class="btn-red" href="#">Быстрый просмотр</a>
+                </li>
+                <li class="catalog-item">
+                    <h3><a class="product-title" href="#">Сливочное с шоколадной стружкой</a></h3>
+                    <p><img src="img/icecream-chocolatechips.png" width="10" height="10" alt="Сливочное с шоколадной стружкой"></p>
+                    <p class="product-price">320 <span>/кг</span></p>
+                    <a class="btn-red" href="#">Быстрый просмотр</a>
+                </li>
+                <li class="catalog-item">
+                    <h3><a class="product-title" href="#">Сливочно-ванильное с кусочками шоколадам</a></h3>
+                    <p><img src="img/icecream-vanilla-chocolate.png" width="10" height="10" alt="Сливочно-ванильное с кусочками шоколада"></p>
+                    <p class="product-price">440 <span>/кг</span></p>
+                    <a class="btn-red" href="#">Быстрый просмотр</a>
+                </li>
+                <li class="catalog-item">
+                    <h3><a class="product-title" href="#">Сливочное с ментоловым сиропом</a></h3>
+                    <p><img src="img/icecream-menthol.png" width="10" height="10" alt="Сливочное с ментоловым сиропом"></p>
+                    <p class="product-price">435 <span>/кг</span></p>
+                    <a class="btn-red" href="#">Быстрый просмотр</a>
+                </li>
+                  <li class="catalog-item">
+                    <h3><a class="product-title" href="#">Сливочное с кусочками шоколада</a></h3>
+                    <p><img src="img/icecream-p-chocolates.png" width="10" height="10" alt="Сливочное с кусочками шоколада"></p>
+                    <p class="product-price">355 <span>/кг</span></p>
+                    <a class="btn-red" href="#">Быстрый просмотр</a>
+                </li>
+                <li class="catalog-item">
+                    <h3><a class="product-title" href="#">Сливочное с мятным сиропом</a></h3>
+                    <p><img src="img/icecream-mint.png" width="10" height="10" alt="Сливочное с мятным сиропом"></p>
+                    <p class="product-price">420 <span>/кг</span></p>
+                    <a class="btn-red" href="#">Быстрый просмотр</a>
+                </li>
             </ul>
         </section>
-        
-        <section class="advantages">
-            <h2>Магазин Глейси -это онлайн и офлайн магазин по продаже мороженного собсвенного производства на развес</h2>
-            <ul>
-                <li class="advantages-first"> <p>Все наше мороженное изготавливается на собсвенном производстве,
-                    с использованием современного оборудования и проверенных временем технологий.</p></li>
-                <li class="advantages-second"> <p> Для приготовления мороженного используются настоящие сливки и молоко высочайшего качества.
-                    Все дополнительные ингридиенты и добавки произведены из натурального, экологически
-                    чистого сырья.</p></li>
-                <li class="advantages-third"> <p>Закупка ингридиентов производится только у проверенных фермерских хозяйств и компаний, 
-                    с которыми нас связывает долговременное сотрудничество.</p></li>
-                <li class="advantages-fourth"> <p> Доставка нашего мороженного до заказчиков осуществляется в специальном террмопаке,
-                    которая не дает мороженному растаять в пути и позволяет ему сохранить свой превосходный вкус.</p></li>
+       
+        <div class="pagination">
+            <ul class="pagination-list">
+                <li class="pagination-item-prev"><a href="#">Предыдущая</a></li>
+                <li class="pagination-item-current"><a>1</a></li>
+                <li class="pagination-item"><a href="#">2</a></li>  
+                <li class="pagination-item"><a href="#">3</a></li>
+                <li class="pagination-item"><a href="#">4</a></li>
+                <li class="pagination-item"><a href="#">5</a></li>
+                <li class="pagination-item-next"><a href="#">Следующая</a></li>  
             </ul>
-        </section>
-        
-        <section class="user-content">
-            <h2 class="visually-hidden">Контент для клиентов</h2>
-            <article class="news">
-                <h3>Новое в нашем блоге</h3>
-                <a href="#">10 способов сервировки фруктовых щербетов к столу</a>
-            </article>
-            <div class="subscription-form">
-                <p>Подпишитесь на нашу слыдкую рассылку и будете всегда в курсе всего самого вкусного,
-                что у нас происходит. Обещаем не спамить и не слать всякой не нужной ерунды. Честно =)</p>
-                <!--...тут должна быть форма на подписку .....-->
-            </div>
-        </section>
-        
-        <section class="map">
-            <h2 class="visually-hidden">Как проехать?</h2>
-            <div class="map-info">
-                <p>Адрес главного офиса и офлай магазина:
-                <b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b>
-                Для заказов по телефону:
-                <b>8 812 450 25 25</b>
-                (c 10 до 20 ежедневно)</p>
-                <a class="btn-red" href="#" >Форма обратной связи</a>
-            </div>
-        </section>
+        </div>
         
     </main>   
        
@@ -195,12 +195,7 @@
             </div>          
     </footer>
       
-<!--.........................POPUP..................................-->        
-           
-    <div class="feedback-form">
-        <h2> Мы обязательно вам ответим!</h2>
-        <!--..тут должна быть форма обратной связи..-->
-    </div>   
+   
 
   </body>
 </html>
