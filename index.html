@@ -3,18 +3,16 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
-    <link href="css/normalize.css" rel="stylesheet"> 
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet"> 
-  </head>
+      </head>
   <body>
   <!--.........................HEADER................................-->
      <input class="visible-hidden" type="radio" id="slide-1" name="slider-btn" checked="">
      <input class="visible-hidden" type="radio" id="slide-2" name="slider-btn">
      <input class="visible-hidden" type="radio" id="slide-3" name="slider-btn">
-            
+   
+    <div class="index-background">        
     <header class="main-header">
-        <a class="index-logo"><img src="img/ingex-logo.png" width="154" height="64" alt="GllasyShop"></a>
+        <a class="index-logo"><img src="img/logo.svg" width="154" height="64" alt="GllasyShop"></a>
         <nav class="header-navigation">   
             <ul class="site-navigation">
                 <li class="navigation-item"><a href="catalog.html">Каталог</a>
@@ -62,15 +60,16 @@
               <label for="slide-2">Второй слайд</label>
               <label for="slide-3">Третий слайд</label>
             </div>
-            <div class="slide slide1-view">
+            
+            <div class="slide" id="icecream-1">
                 <p>Крем-брюле и пломбир с малиновым джемом</p>
                 <a class="btn-red btn-red-big" href="#">Давайте оба!</a>
             </div>
-            <div class="slide slide2-view">                
+            <div class="slide" id="icecream-2">                
                 <p>Шоколадный пломбир и лимонный сорбет</p>
                 <a class="btn-red btn-red-big" href="#">Давайте оба!</a>
             </div>
-            <div class="slide slide3-view">                
+            <div class="slide" id="icecream-3">                
                 <p>Пломбир с помадкой и клубничный щербет</p>
                 <a class="btn-red btn-red-big" href="#">Давайте оба!</a>
             </div>            
@@ -97,25 +96,25 @@
             <ul class="catalog-list">
                 <li class="catalog-item hit">
                     <h3 class="item-title"><a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
-                    <p class="item-description"><img src="img/icecream-orange.png" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитросовой стружкой"></p>
+                    <p class="item-description"><img src="img/icecream-orange.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитросовой стружкой"></p>
                     <p class="product-price">310 <span>/кг</span></p>
                     <a class="btn-red fast-view" href="#">Быстрый просмотр</a>
                 </li>
                 <li class="catalog-item hit">
                     <h3 class="item-title" ><a href="#">Сливочно-кофейное с кусочками шоколада</a></h3>
-                    <p class="item-description"><img src="img/icecream-coffee.png" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада"></p>
+                    <p class="item-description"><img src="img/icecream-coffee.jpg" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада"></p>
                     <p class="product-price">380 <span>/кг</span></p>
                     <a class="btn-red fast-view" href="#">Быстрый просмотр</a>
                 </li>
                   <li class="catalog-item hit">
                     <h3 class="item-title" ><a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a></h3>
-                    <p class="item-description"><img src="img/icecream-strawberry.png" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада"></p>
+                    <p class="item-description"><img src="img/icecream-strawberry.jpg" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада"></p>
                     <p class="product-price">355 <span>/кг</span></p>
                     <a class="btn-red fast-view" href="#">Быстрый просмотр</a>
                 </li>
                 <li class="catalog-item hit">
                     <h3 class="item-title" ><a href="#">Сливочное крем-брюле с карамельной подливкой</a></h3>
-                    <p class="item-description"><img src="img/icecream-сremebrulee.png" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой"></p>
+                    <p class="item-description"><img src="img/icecream-сremebrulee.jpg" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой"></p>
                     <p class="product-price">415 <span>/кг</span></p>
                     <a class="btn-red fast-view" href="#">Быстрый просмотр</a>
                 </li>
@@ -183,11 +182,11 @@
         </nav>
         
             <div class="developer">
-                <div class="developer-logo"><img src="img/dev-logo.png" width="108" height="39" alt="HTML Academy"></div>
+                <div class="developer-logo"><img src="img/logo-htmlacademy.svg" width="109" height="37" alt="HTML Academy"></div>
                 <p>Сделано в <a class="developer-name" href="#">HTML Academy</a> © 2017</p>
             </div>          
     </footer>
-      
+    </div>     
 <!--.........................POPUP..................................-->        
            
     <div class="feedback-form">
@@ -197,3 +196,21 @@
 
   </body>
 </html>
+
+
+
+
+
+
+
+
+<!--..
+<link href="css/normalize.css" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">  
+..-->
+
+
+
+
+
