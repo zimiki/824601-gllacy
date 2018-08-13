@@ -243,27 +243,3 @@ body{
 
 /* ------------------------ POPUP ------------------------*/
 
-.bg-Клубничный_фон {
-    width: 560px; height: 220px;
-    background: url('css_sprites.png') -10px -10px;
-}
-
-
-
-.bg-Малиновый_фон {
-    width: 560px; height: 229px;
-    background: url('css_sprites.png') -10px -490px;
-}
-
-.bg-Шоколадный_фон {
-    width: 560px; height: 229px;
-    background: url('css_sprites.png') -10px -739px;
-}
-
-
-
-
-.bg-Почтовый_фон {
-    width: 560px; height: 220px;
-    background: url('css_sprites.png') -10px -250px;
-}
