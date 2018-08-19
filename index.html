@@ -31,13 +31,37 @@
         <div class="user-block">
             <div class="user-block-wrap">
                 <a class="btn btn-search" href="#">Поиск</a>
-                <!--..тут должна быть форма поиска..-->
+                
+                
+ <!--.... форма  для поиска начало..........-->
+                <div class="visually-hidden search-form-wrap">
+                    <h3 class="visually-hidden">Поиск</h3>
+                    <form action="https://echo.htmlacademy.ru" method="post" name="search-form" >
+                        <input class="search-input" type="search" name="search" placeholder="Что ищем?" aria-label="Поиск по сайту">
+                    </form>
+                </div>
+<!--.... форма  для поиска конец..........-->                          
             </div>
            
+            
             <div class="user-block-wrap">
                 <a class="btn btn-login" href="#">Вход</a>
-                <!--..тут должна быть форма входа..-->
+                
+                
+<!--.... форма  для входа начало..........-->
+                <div class="visually-hidden login-form-wrap">
+                    <h3 class="visually-hidden">Личный кабинет</h3>   
+                    <form action="https://echo.htmlacademy.ru" method="post" name="login-form" >
+                        <input class="login-form-input" type="email" name="login-email" placeholder="Электронная почта" aria-label="Электронная почта">
+                        <input class="login-form-input" type="password" name="login-password" placeholder="Пароль"  aria-label="Пароль">
+                    </form>
+                    <a class="login-form-option" href="#">Забыли пароль?</a>
+                    <a class="login-form-option" href="#">Новая регистрация</a>
+                    <button class="btn-red" type="submit">Войти</button>
+                </div>
+<!--.... форма  для входа конец.........-->   
             </div>
+            
             
             <div class="user-block-wrap">
                 <a class="btn btn-cart" href="#">Пусто</a>                
@@ -140,7 +164,15 @@
             <div class="subscription-form">
                 <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного,
                 что у нас происходит. Обещаем не спамить и не слать всякой не нужной ерунды. Честно =)</p>
-                <!--...тут должна быть форма на подписку .....-->
+                
+                
+<!--.... форма для подписки начало.........-->   
+                <form action="https://echo.htmlacademy.ru" method="post" name="subscription-form">
+                    <input type="email" name="subscription-email" placeholder="Электронная почта" aria-label="Оформить подписку">
+                    <button class="btn-red" type="submit">Отправить</button>
+                </form>
+ <!--.... форма для подписки конец.........-->                  
+                
             </div>
         </section>
         
@@ -189,9 +221,20 @@
     </div>     
 <!--.........................POPUP..................................-->        
            
-    <div class="feedback-form">
-        <h3 class="feedback-form-title"> Мы обязательно вам ответим!</h3>
-        <!--..тут должна быть форма обратной связи..-->
+    <div class="visually-hidden feedback-form">
+        <button class="close" type="button">Закрыть</button>
+        <h3 class="feedback-form-title"> Мы обязательно вам ответим! </h3>
+        
+ <!--.... форма  для отзывов начало ...........-->
+        
+        <form action="https://echo.htmlacademy.ru" method="post" name="feedback" >
+            <input class="feedback-short-input" type="text"   name="feedback-name" placeholder="Как вас зовут?" aria-label="Ваше имя">
+            <input class="feedback-short-input" type="email" name="feedback-email" placeholder="Ваша почта для ответа?" aria-label="Ваша почта">
+            <input class="feedback-long-input" type="text"  name="feedback-text" placeholder="Напишите что-нибудь..." aria-label="Ваш отзыв">
+        </form>
+        <button class="btn-red" type="submit">Отправить</button>
+<!--.... форма  для отзывов конц..........-->
+                
     </div>   
 
   </body>
