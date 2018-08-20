@@ -6,11 +6,7 @@
       </head>
   <body>
   <!--.........................HEADER................................-->
-     <input class="visible-hidden" type="radio" id="slide-1" name="slider-btn" checked="">
-     <input class="visible-hidden" type="radio" id="slide-2" name="slider-btn">
-     <input class="visible-hidden" type="radio" id="slide-3" name="slider-btn">
-   
-    <div class="index-background">        
+      
     <header class="main-header">
         <a class="index-logo"><img src="img/logo.svg" width="154" height="64" alt="GllasyShop"></a>
         <nav class="header-navigation">   
@@ -27,49 +23,40 @@
                 <li class="navigation-item"><a href="#">Доставка и оплата</a></li>
                 <li class="navigation-item"><a href="#">О компании</a></li>
              </ul>  
-        </nav>         
+        </nav> 
+        
         <div class="user-block">
-            <div class="user-block-wrap">
-                <a class="btn btn-search" href="#">Поиск</a>
-                
-                
- <!--.... форма  для поиска начало..........-->
-                <div class="visually-hidden search-form-wrap">
-                    <h3 class="visually-hidden">Поиск</h3>
-                    <form action="https://echo.htmlacademy.ru" method="post" name="search-form" >
-                        <input class="search-input" type="search" name="search" placeholder="Что ищем?" aria-label="Поиск по сайту">
+            
+            <div class="user-block-point">
+                <a class="user-block-btn btn-search" href="#"><span class="visually-hidden">Поиск по сайту</span></a>
+                <div class="search-form-wrap">
+                    <form action="https://echo.htmlacademy.ru" method="post" name="search-form">
+                        <input class="search-input" type="search" name="search" placeholder="Что ищем?" aria-label="Ваш запрос">
                     </form>
                 </div>
-<!--.... форма  для поиска конец..........-->                          
             </div>
            
-            
-            <div class="user-block-wrap">
-                <a class="btn btn-login" href="#">Вход</a>
-                
-                
-<!--.... форма  для входа начало..........-->
-                <div class="visually-hidden login-form-wrap">
-                    <h3 class="visually-hidden">Личный кабинет</h3>   
-                    <form action="https://echo.htmlacademy.ru" method="post" name="login-form" >
-                        <input class="login-form-input" type="email" name="login-email" placeholder="Электронная почта" aria-label="Электронная почта">
-                        <input class="login-form-input" type="password" name="login-password" placeholder="Пароль"  aria-label="Пароль">
+            <div class="user-block-point">
+                <a class="user-block-btn btn-login" href="#">Вход</a>
+                <div class="login-form-wrap">
+                     <form action="https://echo.htmlacademy.ru" method="post" name="login-form" >
+                        <input class="login-form-input" type="email" name="login-email" placeholder="Электронная почта" aria-label="Ваша электронная почта">
+                        <input class="login-form-input" type="password" name="login-password" placeholder="Пароль"  aria-label="Ваш пароль">
                     </form>
                     <a class="login-form-option" href="#">Забыли пароль?</a>
                     <a class="login-form-option" href="#">Новая регистрация</a>
                     <button class="btn-red" type="submit">Войти</button>
                 </div>
-<!--.... форма  для входа конец.........-->   
             </div>
-            
-            
-            <div class="user-block-wrap">
-                <a class="btn btn-cart" href="#">Пусто</a>                
+                        
+            <div class="user-block-point">
+                <a class="user-block-btn btn-cart" href="#">Пусто</a>                
             </div>            
         </div>
+        
         <div class="main-slider-info">
-                <p>С 10 до 20, ежедневно</p>
-                <a class="phone-header" href="tel:88124502525">8 812 450-25-25</a>
+            <p>С 10 до 20, ежедневно</p>
+            <a class="phone-header" href="tel:88124502525">8 812 450-25-25</a>
        </div>       
     </header>
 <!--.........................MAIN..................................-->
@@ -79,10 +66,10 @@
         <section class="main-slider">            
             
             <h2 class="visually-hidden">Наши товары</h2>
-            <div class="slider-controls">
-              <label for="slide-1">Первый слайд</label>
-              <label for="slide-2">Второй слайд</label>
-              <label for="slide-3">Третий слайд</label>
+            <div class="slider-controls-wrap">
+                <button class="slider-control" type="button">Первый слайд</button>
+                <button class="slider-control" type="button">Второй слайд</button>
+                <button class="slider-control" type="button">Третий слайд</button>
             </div>
             
             <div class="slide" id="icecream-1">
@@ -218,10 +205,10 @@
                 <p>Сделано в <a class="developer-name" href="#">HTML Academy</a> © 2017</p>
             </div>          
     </footer>
-    </div>     
+         
 <!--.........................POPUP..................................-->        
            
-    <div class="visually-hidden feedback-form">
+    <div class="feedback-form">
         <button class="close" type="button">Закрыть</button>
         <h3 class="feedback-form-title"> Мы обязательно вам ответим! </h3>
         

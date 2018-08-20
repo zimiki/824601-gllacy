@@ -23,54 +23,51 @@
                 <li class="navigation-item"><a href="#">О компании</a></li>
              </ul>  
         </nav>         
+       
         <div class="user-block">
-            <div class="user-block-wrap">
-                <a class="btn btn-search" href="#">Поиск</a>
-                
- <!--.... форма  для поиска начало..........-->
-                <div class="visually-hidden search-form-wrap">
-                    <h3 class="visually-hidden">Поиск</h3>
-                    <form action="https://echo.htmlacademy.ru" method="post" name="search-form" >
-                        <input class="search-input" type="search" name="search" placeholder="Что ищем?" aria-label="Поиск по сайту">
+
+           <div class="user-block-point">
+                <a class="user-block-btn btn-search" href="#"><span class="visually-hidden">Поиск по сайту</span></a>
+                <div class="search-form-wrap">
+                    <form action="https://echo.htmlacademy.ru" method="post" name="search-form">
+                        <input class="search-input" type="search" name="search" placeholder="Что ищем?" aria-label="Ваш запрос">
                     </form>
                 </div>
-<!--.... форма  для поиска конец..........-->   
             </div>
            
-            <div class="user-block-wrap">
-                <a class="btn btn-login" href="#">Вход</a>
-                
-<!--.... форма  для входа начало..........-->
-                <div class="visually-hidden login-form-wrap">
-                    <h3 class="visually-hidden">Личный кабинет</h3>   
-                    <form action="https://echo.htmlacademy.ru" method="post" name="login-form" >
-                        <input class="login-form-input" type="email" name="login-email" placeholder="Электронная почта" aria-label="Электронная почта">
-                        <input class="login-form-input" type="password" name="login-password" placeholder="Пароль"  aria-label="Пароль">
+            <div class="user-block-point">
+                <a class="user-block-btn btn-login" href="#">Вход</a>
+                <div class="login-form-wrap">
+                     <form action="https://echo.htmlacademy.ru" method="post" name="login-form" >
+                        <input class="login-form-input" type="email" name="login-email" placeholder="Электронная почта" aria-label="Ваша электронная почта">
+                        <input class="login-form-input" type="password" name="login-password" placeholder="Пароль"  aria-label="Ваш пароль">
                     </form>
                     <a class="login-form-option" href="#">Забыли пароль?</a>
                     <a class="login-form-option" href="#">Новая регистрация</a>
                     <button class="btn-red" type="submit">Войти</button>
                 </div>
-<!--.... форма  для входа конец.........-->   
-            </div>
+            </div>          
             
-            <div class="user-block-wrap">
-                <a class="btn btn-cart" href="#">Пусто</a>
-                <div class="cart-list">
-                   <table class="cart-table">
+            
+            <div class="user-block-point">
+                <a class="user-block-btn btn-cart" href="#">2 товара</a>
+                <div class="cart-list-wrap">
+                   <table class="cart-list">
                         <tr class="cart-item">
                             <td><button class="delete-cart-item" type="button">Удалить</button></td>
-                            <td class="item-cl">Поломбир с апельсиновым джемом</td>
-                            <td class="weight-cl">1,5 кг</td>
-                            <td class="price-cl">x 200 руб.</td>
-                            <td class="total-cl">300 руб.</td>
+                            <td class="cart-item-name">Поломбир с апельсиновым джемом
+                                <span class="cart-item-price">x 200 руб.</span>
+                            </td>
+                            <td class="cart-item-weight">1,5 кг</td>
+                            <td class="cart-item-total">300 руб.</td>
                         </tr>
                         <tr class="cart-item">
                             <td><button class="delete-cart-item" type="button">Удалить</button></td>
-                            <td class="item-cl">Клубничный пломбир с присыпкой из белого шоколада</td>
-                            <td class="weight-cl">1,5 кг</td>
-                            <td class="price-cl">x 300 руб.</td>
-                            <td class="total-cl">450 руб.</td>
+                            <td class="cart-item-name">Клубничный пломбир с присыпкой из белого шоколада
+                                <span class="cart-item-price">x 300 руб.</span>
+                            </td>
+                            <td class="cart-item-weight">1,5 кг</td>
+                            <td class="cart-item-total">450 руб.</td>
                         </tr>    
                     </table>
                     <span class="total-price">Итого: 750 руб.</span>
@@ -119,13 +116,12 @@
                               <input type="text" name="max-price-value" value="500" aria-label="Максимальная цена">
                               <span>руб.</span>
                       </legend>
-                       <input class="visually-hidden" type="range" name="price-range" min="0" max="800" step="5" value="500" aria-label="Фильтр диапазона цен">
-                        <div class="range-wrap">
+                       <div class="range-wrap">
                             <div class="range-bar">
                                 <div class="price-value"></div>
                             </div>
-                            <div class="range-bar-switch min-price-switch"></div>
-                            <div class="range-bar-switch max-price-switch"></div>
+                            <div class="range-bar-switch min-price-switch" tabindex="0"></div>
+                            <div class="range-bar-switch max-price-switch" tabindex="0"></div>
                         </div>
                 </fieldset>      
 
@@ -311,14 +307,7 @@
                 <p>Сделано в <a class="developer-name" href="#">HTML Academy</a> © 2017</p>
             </div>          
     </footer>
-      
-<!--.........................POPUP..................................-->        
-           
-    <div class="feedback-form">
-        <h3 class="feedback-form-title"> Мы обязательно вам ответим!</h3>
-        <!--..тут должна быть форма обратной связи..-->
-    </div> 
-      
+ 
 
   </body>
 </html>
