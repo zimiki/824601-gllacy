@@ -1,13 +1,58 @@
+@font-face {
+    font-family: "Roboto";
+     src: local("Roboto"),         
+         url("../fonts/roboto.woff") format("woff"),
+         url("../fonts/roboto.woff2") format("woff2");  
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: "Roboto";
+    src: local("Roboto Medium"), local("Roboto-Medium"),          
+          url("../fonts/robotomedium.woff") format("woff"),
+          url("../fonts/robotomedium.woff2") format("woff2");  
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: "Roboto";
+    src: local("Roboto Bold"), local("Roboto-Bold"),          
+          url("../fonts/robotobold.woff") format("woff"),
+          url("../fonts/robotobold.woff2") format("woff2");  
+    font-weight: 700;
+    font-style: normal;
+}
+
+
 body{
+    margin: 0;
+    padding: 0;
+    
     min-width: 1200px;
     font-family: "Roboto", "Arial", sans-serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 22px;
     color: #ffffff;
-    background: green;
+    background-color: #849d8f;
+/*  background-color: #8996a6;
+    background-color: #9d8b84; */   
+ 
 }
 
+
+img {
+    width: 100%;
+}
+
+.visually-hidden {           /* поработать над этим взять из лекции */
+    display: none;
+    font-size: 0px;
+}
 
 .container{
     width: 1146px;
@@ -19,6 +64,7 @@ body{
 .btn-red {
     display: inline-block;
     cursor: pointer;
+    outline: none; 
     background-image: linear-gradient(to top, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
     font-size: 18px;
     line-height: 24px;
@@ -33,7 +79,8 @@ body{
     text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
 }
 
-.btn-red:hover{
+.btn-red:hover,
+.btn-red:focus{
     background-image: linear-gradient(to top, rgb(237,112,94) 0%, rgb(245,134,105) 100%);
     box-shadow: 0px 2px 2px 0px rgba(172, 16, 0);
 } 
@@ -43,46 +90,201 @@ body{
     box-shadow: inset 0px 2px 2px 0px rgba(148, 39, 24);
 } 
 
-/* ------------------------слайдер------------------------*/
 
-.visible-hidden {
-    display: none;
+
+/* ------------------------ HEADER ------------------------*/
+
+.site-navigation,
+.type-navigation {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.navigation-item a{
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.navigation-item a:hover,
+.navigation-item a:focus {
+    text-decoration: none;
+    color: #333333;
+    background-color: #f7f6f3;
+    padding: 9px 14px;
+    border-radius: 35px;
+}
+
+.navigation-item a:active{
+  background-color: #ededed;
+  box-shadow: inset 0px 2px 1px 0px rgba(105, 105, 105, 1);
+  
+}
+
+.navigation-item .curent{
+    background-color: #d07058;
+    padding: 9px 14px;
+    border-radius: 35px;
+    text-decoration: none;    
+}
+
+.type-navigation-item a{
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+    text-decoration: none;
+    color: #323232;    
+}
+
+.type-navigation li:first-child{    /* Почему ничего не выбирается !!!!!!!!!!!*/     
+     font-weight: 700;
+     color: red;
 }
 
 
-.slide{
+.type-navigation-item a:hover,
+.type-navigation-item a:focus {
+    background-color: #fbded7;
+    padding: 6px 220px;
+    border-radius: 0;
+    
+}
+
+.type-navigation-item a:active {
+    background-color: #f6b5a5;
+}
+
+.btn-search{
+    display: block;
+    background-color: #a1b4a9;
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+    background-image: url(../img/loupe.svg) center no-repeat; 
+}
+
+.search-form-wrap{
+   color: #323232; 
+   background-color: #f8f7f4;
+}
+
+.user-block-btn{
     position: relative;
-   /* height: 500px;
-    width: 500px;
-    background: red;
-    display: none; */
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 500; 
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #a1b4a9; 
+    padding-left: 45px;
+    padding-right: 18px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    border-radius: 35px;
+    margin-right: 10px;
+}
+
+.login-form-wrap{
+   color: #323232; 
+   background-color: #f8f7f4;
+}
+
+.login-form-option{
+    font-size: 13px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #323232; 
+}
+
+.btn-login::before{
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 16px;
+    width: 21px;
+    height: 19px;
+    background-image: url(../img/entrance.svg);     
 }
 
 
-#slide-1:checked~.index-background {
-    background-color: #849d8f;
+.btn-cart::before{
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 16px;
+    width: 21px;
+    height: 20px;
+    background-image: url(../img/basket.svg);     
 }
 
-#slide-2:checked~.index-background {
-    background-color: #8996a6;
+.cart-list-wrap{
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: 400;
+    color: #323232;
+    background-color: #f8f7f4;
 }
 
-#slide-3:checked~.index-background {
-    background-color: #9d8b84;
+.total-price{
+   font-size: 15px;
+   line-height: 18px;
+   font-weight: 700; 
 }
 
-/* не могу разобраться как определить активный лейбл */
+
+.header-info {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.phone-header{
+    font-size: 22px;
+    line-height: 24px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #ffffff;
+}
 
 
-.slider-controls label {
-    display: inline-block;
+
+/* ------------------------ MAIN ------------------------*/
+
+
+.slide-1{
+    background: url("../img/big1.png") center no-repeat;
+}
+
+.slide-2{
+    background: url("../img/big2.png")center no-repeat;    
+}
+
+.slide-3{
+    background: url("../img/big3.png")center no-repeat;   
+}
+
+.slider-control {
     width: 21px;
     height: 21px;
-    border-radius: 12px;
+    border-radius: 50%;
     margin-right: 8px;
     border: 2px solid #ffffff;
-    cursor: pointer;
     font-size: 0;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.other-slide{
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0); 
+}
+
+.other-slide:hover,
+.other-slide:focus{
+    outline: none; 
+    background-color: rgba(255, 255, 255, 0.4); 
 }
 
 .slide p{
@@ -92,96 +294,122 @@ body{
     margin-top: 390px;
     font-size: 60px;
     line-height: 61px;
-    font-weight: bold;
+    font-weight: 700;
 }  
 
-
 .btn-red-big{
-    position: absolute;
-    top: 0;                      /*настроить кнопки*/
-    right: 0;
     font-size: 32px;
     line-height: 44px;
     padding: 10px 41px;
     border-radius: 40px;    
 }
 
+.promo{
+    width: 560px;
+    min-height: 230px;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 700;
+    border-radius: 14px;
+}
+
+.promo b{
+    font-size: 35px;
+    line-height: 41px;
+    font-weight: 700;  
+}
 
 
+.promo-raspberries{
+    background: #944165 url("../img/raspberries-bg.jpg") no-repeat;  
+}
 
 
-
-/* ------------------------ HEADER ------------------------*/
-
-
-
-/* ------------------------ MAIN ------------------------*/
+.promo-chocolate{
+    background: #4b2b1f url("../img/chocolate-bg.jpg") no-repeat;  
+}
 
 
+.breadcrumbs{
+    list-style: none;
+}
+
+.breadcrumbs-point{
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;  
+    color: #ffffff;    
+}
 
 
+.breadcrumbs-point a{
+    color: #ffffff;    
+}
 
 
+.catalog-title{
+    margin: 0;
+    font-size: 35px;
+    line-height: 41px;
+    font-weight: 700;      
+}
+
+.filters-form-wrap{
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 500;  
+    color: #ffffff;   
+}
 
 
+.filters-form-wrap legend{
+    font-size: 14px;
+    line-height: 16px;  
+    
+}
 
-
-/* ------------------------карточки товара------------------------*/
-
-
-
+.catalog-list{
+    list-style: none;
+}
 
 .catalog-item{    
-    position: relative;
-    border: 1px solid green;
-    width: 265px;                 /*   267 если убратть бордер*/
+    width: 267px;                
     margin-right: 26px;
 }
 
-
-.catalog-item:nth-child(4n){
-    margin-right: 0;
-}
-
-
 .item-title a{
-    text-decoration: none;
-    color: #ffffff;
     font-size: 16px;
     line-height: 22px;
+    font-weight: 500;
+    color: #ffffff;    
+}
+
+.product-price {
+    font-size: 35px;
+    line-height: 45px;
+    font-weight: 700;  
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ------------------------ преимущества------------------------*/
-
 .advantages-list{
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 400;
+    color: #323232; 
     border-radius: 15px;    
-    background: #f0e4cc url("../img/wafer.jpg") repeat;
-    color: #323232;
     padding: 26px 20px;
+    background: #f0e4cc url("../img/wafer-bg.jpg") repeat;    
 }
 
 .advantages-title{
     font-size: 24px;
     line-height: 30px;
+    font-weight: 500;
     margin: 0;
+    
 }
 
+/* -------------------- преимущества----
 .advantages{
     display: inline-block;
     position: relative;
@@ -203,7 +431,7 @@ body{
     left: 0;
     width: 49px;
     height: 49px;
-    background: #ffffff;                          /* заменить на картинку  */
+    background-image: url(../img/ice-cream.svg);                         
 }
 
 .advantages-list p:nth-of-type(2):before{
@@ -213,7 +441,7 @@ body{
     left: 0;
     width: 49px;
     height: 49px;
-    background: red;                             /* заменить на картинку  */
+    background-image: url(../img/cow.svg); 
 }
 
 .advantages-list p:nth-of-type(3):before{
@@ -223,7 +451,7 @@ body{
     left: 0;
     width: 49px;
     height: 49px;
-    background: #000000;                         /* заменить на картинку  */
+    background-image: url(../img/eco.svg); 
 }
 
 .advantages-list p:nth-of-type(4):before{
@@ -233,13 +461,173 @@ body{
     left: 0;
     width: 49px;
     height: 49px;
-    background: blue;                           /* заменить на картинку  */ 
+    background-image: url(../img/thermometer.svg); 
+}
+
+
+ -------------------- преимущества----*/
+
+
+.news{ 
+    width: 560px;
+    min-height: 220px;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 500;
+    color: #323232;
+    background: #ffffff url(../img/strawberry-bg.jpg)no-repeat;
+    border-radius: 14px;   
+}
+
+.article-caption{
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 700;
+    color: #323232;
+}
+
+.subscription-form{
+    width: 560px;
+    min-height: 220px;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 400;
+    color: #5a5a5a;
+    background-color: #f8f7f4;
+    border-radius: 14px;   
+}
+
+
+.map-area{
+    background: url(../img/map.jpg)no-repeat;
+}
+
+.map-info{
+    width: 303px;
+    min-height: 305px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #323232;
+    background-color: rgba(255, 255, 255, 0.98); 
+    border-radius: 14px;       
+}
+
+
+.map-info b{
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;  
+}
+
+.phone-map{
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 700; 
+    color: #323232;
+    text-decoration: none;
+}
+
+
+.pagination-list{
+    list-style: none;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 500;
+}
+
+.pagination-item a{
+
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.pagination-item-current a{
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    color: #323232;
+    background: #ffffff;
+    border-radius: 50%;
 }
 
 
 /* ------------------------ FOOTER ------------------------*/
 
+.social-list,
+.footer-info-list{
+    list-style: none;
+}
 
+.social-list a{
+    font-size: 0;
+}
+
+.social-btn {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    margin-right: 11px;
+    border-radius: 50%;
+    border-width: 3px;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.5);       
+}
+
+.social-btn-tw{
+    background: url(../img/twitter.svg)no-repeat;
+    opacity: 0.8;
+}
+
+.social-btn-inst{
+    background: url(../img/instagram.svg)no-repeat;
+    opacity: 0.8;
+}
+
+.social-btn-fb{
+    background: url(../img/fb.svg)no-repeat;
+    opacity: 0.8;
+}
+
+.social-btn-vk{
+    background: url(../img/vk.svg)no-repeat; 
+    opacity: 0.8;
+}
+
+
+.footer-info-item a{
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 400; 
+    color: #ffffff;     
+}
+
+.footer-info-item .providers{
+   font-weight: 700;  
+}
+
+
+.developer{
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400; 
+    color: #ffffff;       
+}
+
+.developer-name{
+    color: #ffffff;    
+}
 
 /* ------------------------ POPUP ------------------------*/
 
+.feedback-form{
+   color: #323232; 
+   background-color: #f8f7f4;
+}
+
+.feedback-form-title{
+    margin: 0;
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 500; 
+}

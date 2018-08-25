@@ -3,7 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
-      </head>
+    <link href="css/normalize.css" rel="stylesheet"> 
+    <link href="css/style.css" rel="stylesheet">  
+   </head>
   <body>
   <!--.........................HEADER................................-->
       
@@ -13,7 +15,7 @@
             <ul class="site-navigation">
                 <li class="navigation-item"><a href="catalog.html">Каталог</a>
                     <ul class="type-navigation">
-                        <li class="type-navigation-item new-type"><a href="#">Новинки</a></li>
+                        <li class="type-navigation-item"><a href="#">Новинки</a></li>
                         <li class="type-navigation-item"><a href="catalog.html">Сливочное</a></li>
                         <li class="type-navigation-item"><a href="#">Щербеты</a></li>
                         <li class="type-navigation-item"><a href="#">Фруктовый лёд</a></li>
@@ -28,7 +30,7 @@
         <div class="user-block">
             
             <div class="user-block-point">
-                <a class="user-block-btn btn-search" href="#"><span class="visually-hidden">Поиск по сайту</span></a>
+                <a class="btn-search" href="#"><span class="visually-hidden">Поиск по сайту</span></a>
                 <div class="search-form-wrap">
                     <form action="https://echo.htmlacademy.ru" method="post" name="search-form">
                         <input class="search-input" type="search" name="search" placeholder="Что ищем?">
@@ -37,7 +39,7 @@
             </div>
            
             <div class="user-block-point">
-                <a class="user-block-btn btn-login" href="#">Вход<span class="visually-hidden">в личный кабинет</span></a>
+                <a class="user-block-btn btn-login" href="#">Вход <span class="visually-hidden">в личный кабинет</span></a>
                 <div class="login-form-wrap">
                      <form action="https://echo.htmlacademy.ru" method="post" name="login-form" >
                         <input class="login-form-input" type="email" name="login-email" placeholder="Электронная почта" aria-label="Ваша электронная почта">
@@ -54,7 +56,7 @@
             </div>            
         </div>
         
-        <div class="main-slider-info">
+        <div class="header-info">
             <p>С 10 до 20, ежедневно</p>
             <a class="phone-header" href="tel:88124502525">8 812 450-25-25</a>
        </div>       
@@ -68,19 +70,19 @@
             <h2 class="visually-hidden">Наши товары</h2>
             <div class="slider-controls-wrap">
                 <button class="slider-control" type="button">Первый слайд</button>
-                <button class="slider-control" type="button">Второй слайд</button>
-                <button class="slider-control" type="button">Третий слайд</button>
+                <button class="slider-control other-slide" type="button">Второй слайд</button>
+                <button class="slider-control other-slide" type="button">Третий слайд</button>
             </div>
             
-            <div class="slide" id="icecream-1">
+            <div class="slide slide-1">
                 <p>Крем-брюле и пломбир с малиновым джемом</p>
                 <a class="btn-red btn-red-big" href="#">Давайте оба!</a>
             </div>
-            <div class="slide" id="icecream-2">                
+            <div class="slide slide-2">                
                 <p>Шоколадный пломбир и лимонный сорбет</p>
                 <a class="btn-red btn-red-big" href="#">Давайте оба!</a>
             </div>
-            <div class="slide" id="icecream-3">                
+            <div class="slide slide-3">                
                 <p>Пломбир с помадкой и клубничный щербет</p>
                 <a class="btn-red btn-red-big" href="#">Давайте оба!</a>
             </div>            
@@ -88,13 +90,13 @@
         
         <section class="main-promo">
             <h2 class="visually-hidden">Промо акции</h2>
-            <div class="main-promo-raspberries">
+            <div class="promo promo-raspberries">
                 <b>Малинка даром!</b>
                 <p>При покупке 2 кг любого фруктового мороженного, добавим 
                     в ваш заказ банку малинового варенья бесплатно</p>
                 <a class="btn-red" href="#">Хочу варенье!</a>
             </div>
-            <div class="main-promo-chocolate">
+            <div class="promo promo-chocolate">
                 <b>Шоколадки даром!</b>
                 <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку
                     вкуснейшей шоколадной присыпки совершенно бесплатно</p>
@@ -146,7 +148,7 @@
             <h2 class="visually-hidden">Полезная информация</h2>
             <article class="news">
                 <p>Новое в нашем блоге</p>
-                <h3 class="article-caption"><a href="#">10 способов сервировки фруктовых щербетов к столу</a></h3>
+                <h3><a class="article-caption" href="#">10 способов сервировки фруктовых щербетов к столу</a></h3>
             </article>
             <div class="subscription-form">
                 <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного,
@@ -234,11 +236,7 @@
 
 
 
-<!--..
-<link href="css/normalize.css" rel="stylesheet"> 
-<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
-<link href="css/style.css" rel="stylesheet">  
-..-->
+
 
 
 
