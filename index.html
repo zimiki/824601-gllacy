@@ -9,52 +9,55 @@
   <body>
   <!--.........................HEADER................................-->
       
-    <header class="main-header">
-        <a class="index-logo"><img src="img/logo.svg" width="154" height="64" alt="GllasyShop"></a>
-        <nav class="header-navigation">   
-            <ul class="site-navigation">
-                <li class="navigation-item"><a href="catalog.html">Каталог</a>
-                    <ul class="type-navigation">
-                        <li class="type-navigation-item"><a href="#">Новинки</a></li>
-                        <li class="type-navigation-item"><a href="catalog.html">Сливочное</a></li>
-                        <li class="type-navigation-item"><a href="#">Щербеты</a></li>
-                        <li class="type-navigation-item"><a href="#">Фруктовый лёд</a></li>
-                        <li class="type-navigation-item"><a href="#">Мелорин</a></li>
-                    </ul>
-                </li>
-                <li class="navigation-item"><a href="#">Доставка и оплата</a></li>
-                <li class="navigation-item"><a href="#">О компании</a></li>
-             </ul>  
-        </nav> 
-        
-        <div class="user-block">
-            
-            <div class="user-block-point">
-                <a class="btn-search" href="#"><span class="visually-hidden">Поиск по сайту</span></a>
-                <div class="search-form-wrap">
-                    <form action="https://echo.htmlacademy.ru" method="post" name="search-form">
-                        <input class="search-input" type="search" name="search" placeholder="Что ищем?">
-                    </form>
+    <header class="main-header container">
+        <div class="header-navigation">
+            <a class="index-logo"><img src="img/logo.svg" width="154" height="64" alt="GllasyShop"></a>
+            <nav class="header-navigation">   
+                <ul class="site-navigation">
+                    <li class="navigation-item"><a href="catalog.html">Каталог</a>
+                        <ul class="type-navigation">
+                            <li class="type-navigation-new"><a href="#">Новинки</a></li>
+                            <li class="type-navigation-item"><a href="catalog.html">Сливочное</a></li>
+                            <li class="type-navigation-item"><a href="#">Щербеты</a></li>
+                            <li class="type-navigation-item"><a href="#">Фруктовый лёд</a></li>
+                            <li class="type-navigation-item"><a href="#">Мелорин</a></li>
+                        </ul>
+                    </li>
+                    <li class="navigation-item"><a href="#">Доставка и оплата</a></li>
+                    <li class="navigation-item"><a href="#">О компании</a></li>
+                 </ul>  
+            </nav> 
+
+            <div class="user-block">
+
+                <div class="user-block-point">
+                    <a class="btn-search" href="#"><span class="visually-hidden">Поиск по сайту</span></a>
+                    <div class="search-form-wrap">
+                        <form action="https://echo.htmlacademy.ru" method="post" name="search-form">
+                            <input class="search-input" type="search" name="search" placeholder="Что ищем?">
+                        </form>
+                    </div>
                 </div>
-            </div>
-           
-            <div class="user-block-point">
-                <a class="user-block-btn btn-login" href="#">Вход <span class="visually-hidden">в личный кабинет</span></a>
-                <div class="login-form-wrap">
-                     <form action="https://echo.htmlacademy.ru" method="post" name="login-form" >
-                        <input class="login-form-input" type="email" name="login-email" placeholder="Электронная почта" aria-label="Ваша электронная почта">
-                        <input class="login-form-input" type="password" name="login-password" placeholder="Пароль"  aria-label="Ваш пароль">
-                    </form>
-                    <a class="login-form-option" href="#">Забыли пароль?</a>
-                    <a class="login-form-option" href="#">Новая регистрация</a>
-                    <button class="btn-red" type="submit">Войти</button>
+
+                <div class="user-block-point">
+                    <a class="user-block-btn btn-login" href="#">Вход <span class="visually-hidden">в личный кабинет</span></a>
+                    <div class="login-form-wrap">
+                         <form action="https://echo.htmlacademy.ru" method="post" name="login-form" >
+                            <input class="login-form-input" type="email" name="login-email" placeholder="Электронная почта" aria-label="Ваша электронная почта">
+                            <input class="login-form-input" type="password" name="login-password" placeholder="Пароль"  aria-label="Ваш пароль">
+                        </form>
+                        <a class="login-form-option" href="#">Забыли пароль?</a>
+                        <a class="login-form-option" href="#">Новая регистрация</a>
+                        <button class="btn-red" type="submit">Войти</button>
+                    </div>
                 </div>
+
+                <div class="user-block-point">
+                    <a class="user-block-btn btn-cart" href="#">Пусто</a>                
+                </div>            
             </div>
-                        
-            <div class="user-block-point">
-                <a class="user-block-btn btn-cart" href="#">Пусто</a>                
-            </div>            
         </div>
+        
         
         <div class="header-info">
             <p>С 10 до 20, ежедневно</p>
@@ -62,8 +65,8 @@
        </div>       
     </header>
 <!--.........................MAIN..................................-->
-    <main class="container">
-        
+    <main>
+        <div class="container">
         <h1 class="visually-hidden">Магазин Глейси</h1>
         <section class="main-slider">            
             
@@ -107,27 +110,28 @@
         <section class="catalog">
             <h2 class="visually-hidden">Хиты продаж</h2>        
             <ul class="catalog-list">
-                <li class="catalog-item hit">
+                <li class="catalog-item">
                     <h3 class="item-title"><a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
-                    <p class="item-description"><img src="img/icecream-orange.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитросовой стружкой"></p>
+                    <p class="item-description hit"><img src="img/icecream-orange.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитросовой стружкой"></p>
                     <p class="product-price">310 <span>/кг</span></p>
                     <a class="btn-red fast-view" href="#">Быстрый просмотр</a>
                 </li>
-                <li class="catalog-item hit">
-                    <h3 class="item-title" ><a href="#">Сливочно-кофейное с кусочками шоколада</a></h3>
-                    <p class="item-description"><img src="img/icecream-coffee.jpg" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада"></p>
+                <li class="catalog-item">
+                    <h3 class="item-title" ><a href="#">Сливочно-кофейное с кусочками шоколада
+                        </a></h3>
+                    <p class="item-description  hit"><img src="img/icecream-coffee.jpg" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада"></p>
                     <p class="product-price">380 <span>/кг</span></p>
                     <a class="btn-red fast-view" href="#">Быстрый просмотр</a>
                 </li>
-                  <li class="catalog-item hit">
+                  <li class="catalog-item">
                     <h3 class="item-title" ><a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a></h3>
-                    <p class="item-description"><img src="img/icecream-strawberry.jpg" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада"></p>
+                    <p class="item-description  hit"><img src="img/icecream-strawberry.jpg" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада"></p>
                     <p class="product-price">355 <span>/кг</span></p>
                     <a class="btn-red fast-view" href="#">Быстрый просмотр</a>
                 </li>
-                <li class="catalog-item hit">
+                <li class="catalog-item">
                     <h3 class="item-title" ><a href="#">Сливочное крем-брюле с карамельной подливкой</a></h3>
-                    <p class="item-description"><img src="img/icecream-сremebrulee.jpg" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой"></p>
+                    <p class="item-description  hit"><img src="img/icecream-сremebrulee.jpg" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой"></p>
                     <p class="product-price">415 <span>/кг</span></p>
                     <a class="btn-red fast-view" href="#">Быстрый просмотр</a>
                 </li>
@@ -150,20 +154,22 @@
                 <p>Новое в нашем блоге</p>
                 <h3><a class="article-caption" href="#">10 способов сервировки фруктовых щербетов к столу</a></h3>
             </article>
-            <div class="subscription-form">
-                <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного,
-                что у нас происходит. Обещаем не спамить и не слать всякой не нужной ерунды. Честно =)</p>
-                
-                
-<!--.... форма для подписки начало.........-->   
-                <form action="https://echo.htmlacademy.ru" method="post" name="subscription-form">
-                    <input type="email" name="subscription-email" placeholder="Электронная почта" aria-label="Оформить подписку">
-                    <button class="btn-red" type="submit">Отправить</button>
-                </form>
+            <div class="wrap-subscription-form">
+                <div class="subscription-form">
+                    <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного,
+                    что у нас происходит. Обещаем не спамить и не слать всякой не нужной ерунды. Честно =)</p>
+                    
+    <!--.... форма для подписки начало.........-->   
+                    <form action="https://echo.htmlacademy.ru" method="post" name="subscription-form">
+                        <input type="email" name="subscription-email" placeholder="Электронная почта" aria-label="Оформить подписку">
+                        <button class="btn-red" type="submit">Отправить</button>
+                    </form>
  <!--.... форма для подписки конец.........-->                  
-                
+                </div>
             </div>
         </section>
+        </div>
+        
         
         <section class="map">
             <h2 class="visually-hidden">Карта</h2>
@@ -183,7 +189,7 @@
        
 <!--.........................FOOTER................................-->
      
-    <footer class="main-footer">
+    <footer class="main-footer container">
         <div class="social">
               <ul class="social-list">
                 <li><a class="social-btn social-btn-tw" href="#">Twitter</a></li>

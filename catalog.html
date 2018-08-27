@@ -8,13 +8,14 @@
   </head>
   <body>
   <!--.........................HEADER................................-->
-    <header class="main-header">
+    <header class="main-header container">
+        <div class="header-navigation">
         <a class="index-logo" href="index.html"><img src="img/logo.svg" width="154" height="64" alt="GllasyShop"></a>
        <nav class="header-navigation">   
             <ul class="site-navigation">
                 <li class="navigation-item"><a class="curent">Каталог</a>
                     <ul class="type-navigation">
-                        <li class="type-navigation-item new-type"><a href="#">Новинки</a></li>
+                        <li class="type-navigation-new "><a href="#">Новинки</a></li>
                         <li class="type-navigation-item"><a href="catalog.html">Сливочное</a></li>
                         <li class="type-navigation-item"><a href="#">Щербеты</a></li>
                         <li class="type-navigation-item"><a href="#">Фруктовый лёд</a></li>
@@ -29,7 +30,7 @@
         <div class="user-block">
 
            <div class="user-block-point">
-                <a class="user-block-btn btn-search" href="#"><span class="visually-hidden">Поиск по сайту</span></a>
+                <a class="btn-search" href="#"><span class="visually-hidden">Поиск по сайту</span></a>
                 <div class="search-form-wrap">
                     <form action="https://echo.htmlacademy.ru" method="post" name="search-form">
                         <input class="search-input" type="search" name="search" placeholder="Что ищем?">
@@ -73,13 +74,16 @@
                 </div> 
             </div>            
         </div>
-        <div class="main-slider-info">
+        </div>  
+            
+        <div class="header-info">
                 <p>С 10 до 20, ежедневно</p>
                 <a class="phone-header" href="tel:88124502525">8 812 450-25-25</a>
         </div> 
     </header>
 <!--.........................MAIN..................................-->
     <main>
+        <div class="container">
         <div>
             <ul class="breadcrumbs">
                 <li class="breadcrumbs-point"><a href="index.html">Главная</a></li>
@@ -97,6 +101,7 @@
             <div class="filters-form-wrap">
             <form action="https://echo.htmlacademy.ru" method="get" name="filters-form" > 
 
+               <div class="top-filters">
                 <fieldset class="filter-type">
                     <legend>Сортировка:</legend>
                     <select name="select-type">
@@ -147,32 +152,35 @@
                             </label>
                         </li>
                     </ul>     
-                </fieldset>     
-
+                </fieldset> 
+                </div>
+                
+                                
+                <div class="low-filters">
                 <fieldset class="filter-fillers">
                     <legend>Наполнители:</legend>
-                    <ul>
-                        <li class="filter-option ">
+                    <ul class="filter-fillers-list">
+                        <li class="filter-fillers-item">
                             <label>
                                 <input class="visually-hidden" type="checkbox" name="chocolate" value="chocolate" checked>шоколадные
                             </label>  
                         </li>
-                        <li class="filter-option">
+                        <li class="filter-fillers-item">
                             <label>
                                 <input class="visually-hidden" type="checkbox"  name="sugar" value="sugar" checked>сахарные присыпки
                             </label>
                         </li>
-                        <li class="filter-option">
+                        <li class="filter-fillers-item">
                             <label>
                                 <input class="visually-hidden" type="checkbox"  name="fruits" value="fruits">фрукты
                             </label>
                         </li>
-                        <li class="filter-option">
+                        <li class="filter-fillers-item">
                             <label>
                                 <input class="visually-hidden" type="checkbox"  name="syrup" value="syrup">сиропы
                             </label>
                         </li>
-                        <li class="filter-option">
+                        <li class="filter-fillers-item">
                             <label>
                                 <input class="visually-hidden" type="checkbox"  name="jam" value="jam">джемы
                             </label>
@@ -180,6 +188,7 @@
                     </ul>  
                 </fieldset>  
                 <button class="filters-button" type="submit">Применить</button>
+                </div>
             </form>                
           </div>
             <!--.... форма  для фильтров конец...........-->
@@ -276,12 +285,12 @@
                 <li class="pagination-item-next"><a href="#">Следующая</a></li>  
             </ul>
         </div>
-        
+        </div>
     </main>   
        
 <!--.........................FOOTER................................-->
      
-    <footer class="main-footer">
+    <footer class="main-footer container">
         <div class="social">
             <ul class="social-list">
                 <li><a class="social-btn social-btn-tw" href="#">Twitter</a></li>

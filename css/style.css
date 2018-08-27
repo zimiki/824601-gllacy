@@ -30,8 +30,7 @@
 
 body{
     margin: 0;
-    padding: 0;
-    
+    padding: 0;    
     min-width: 1200px;
     font-family: "Roboto", "Arial", sans-serif;
     font-weight: 400;
@@ -41,12 +40,11 @@ body{
     background-color: #849d8f;
 /*  background-color: #8996a6;
     background-color: #9d8b84; */   
- 
 }
 
 
 img {
-    width: 100%;
+    max-width: 100%;
 }
 
 .visually-hidden {           /* поработать над этим взять из лекции */
@@ -54,17 +52,9 @@ img {
     font-size: 0px;
 }
 
-.container{
-    width: 1146px;
-    padding-left: 27px;
-    padding-right: 27px;
-    margin: 0 auto;
-}
-
 .btn-red {
     display: inline-block;
     cursor: pointer;
-    outline: none; 
     background-image: linear-gradient(to top, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
     font-size: 18px;
     line-height: 24px;
@@ -73,14 +63,14 @@ img {
     vertical-align: top;
     color: #ffffff;
     text-decoration: none;
-    padding: 12px 22px;
+    padding: 11px 22px;
     border-radius: 25px;
+    border-width: 0;
     box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
     text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
 }
 
-.btn-red:hover,
-.btn-red:focus{
+.btn-red:hover{
     background-image: linear-gradient(to top, rgb(237,112,94) 0%, rgb(245,134,105) 100%);
     box-shadow: 0px 2px 2px 0px rgba(172, 16, 0);
 } 
@@ -90,30 +80,65 @@ img {
     box-shadow: inset 0px 2px 2px 0px rgba(148, 39, 24);
 } 
 
+.container{
+    width: 1146px;
+    padding-left: 27px;
+    padding-right: 27px;
+    margin: 0 auto;
+}
 
 
 /* ------------------------ HEADER ------------------------*/
 
-.site-navigation,
-.type-navigation {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+.main-header{
+    display: flex;
+    flex-direction: column;    
 }
 
+.header-navigation{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;        
+}
+
+
+.index-logo{
+    width: 154px;
+    margin-right: 22px;
+    margin-top: 10px;
+}
+
+.site-navigation{
+    width: 650px;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none; 
+    margin-top: 23px;
+}
+
+
+
+.header-info{
+    width: 170px;
+    margin-left:auto;
+}
+
+
+
 .navigation-item a{
+    display: inline-block;
     font-size: 16px;
     line-height: 18px;
     font-weight: 700;
     color: #ffffff;
+    padding: 9px 14px;
 }
 
-.navigation-item a:hover,
-.navigation-item a:focus {
+.navigation-item a:hover {    
     text-decoration: none;
     color: #333333;
     background-color: #f7f6f3;
-    padding: 9px 14px;
     border-radius: 35px;
 }
 
@@ -130,48 +155,75 @@ img {
     text-decoration: none;    
 }
 
+
+.type-navigation {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
 .type-navigation-item a{
+    display: inline-block;
     font-size: 14px;
     line-height: 16px;
     font-weight: 400;
     text-decoration: none;
-    color: #323232;    
+    color: #323232;     
 }
 
-.type-navigation li:first-child{    /* Почему ничего не выбирается !!!!!!!!!!!*/     
-     font-weight: 700;
-     color: red;
+.type-navigation-new a{   
+    display: inline-block;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 700;    
+    text-decoration: none;
+    color: #323232; 
 }
 
-
-.type-navigation-item a:hover,
-.type-navigation-item a:focus {
+.type-navigation-new a:hover,
+.type-navigation-item a:hover{
     background-color: #fbded7;
-    padding: 6px 220px;
+    padding: 6px 22px;
     border-radius: 0;
-    
 }
 
+.type-navigation-new a:active, 
 .type-navigation-item a:active {
     background-color: #f6b5a5;
 }
 
+
+.user-block{
+    display: flex;
+    width: 280px;
+    margin-left:auto;
+    margin-top: 23px;    
+}
+
+
 .btn-search{
     display: block;
-    background-color: #a1b4a9;
     border-radius: 50%;
     width: 34px;
     height: 34px;
-    background-image: url(../img/loupe.svg) center no-repeat; 
+    background: #a1b4a9 url(../img/loupe.svg) center no-repeat; 
+    margin-right: 10px;
+}
+
+.btn-search:hover{
+    background: #f8f7f4 url(../img/loupe-black.svg) center no-repeat; 
+    
 }
 
 .search-form-wrap{
+   display: none;
    color: #323232; 
    background-color: #f8f7f4;
 }
 
 .user-block-btn{
     position: relative;
+    display: block;
     font-size: 14px;
     line-height: 16px;
     font-weight: 500; 
@@ -186,17 +238,11 @@ img {
     margin-right: 10px;
 }
 
-.login-form-wrap{
-   color: #323232; 
-   background-color: #f8f7f4;
+.user-block-btn:hover{
+   color: #323232;
+   background-color: #f8f7f4;  
 }
 
-.login-form-option{
-    font-size: 13px;
-    line-height: 24px;
-    font-weight: 400;
-    color: #323232; 
-}
 
 .btn-login::before{
     content: "";
@@ -205,9 +251,12 @@ img {
     left: 16px;
     width: 21px;
     height: 19px;
-    background-image: url(../img/entrance.svg);     
+    background-image: url(../img/entrance-white.svg);    
 }
 
+.btn-login:hover::before{
+    background-image: url(../img/entrance.svg);    
+}
 
 .btn-cart::before{
     content: "";
@@ -219,7 +268,35 @@ img {
     background-image: url(../img/basket.svg);     
 }
 
+.btn-cart:hover::before{
+   background-image: url(../img/basket-red.svg);     
+}
+
+
+
+
+.login-form-wrap{
+    color: #323232; 
+    background-color: #f8f7f4;
+    display: none;
+}
+
+
+
+.login-form-option{
+    font-size: 13px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #323232; 
+}
+
+.login-form-option:hover,
+.login-form-option:active{
+    color: #e84d37;
+}
+
 .cart-list-wrap{
+    display: none;
     font-size: 13px;
     line-height: 16px;
     font-weight: 400;
@@ -253,27 +330,46 @@ img {
 
 /* ------------------------ MAIN ------------------------*/
 
+.main-slider{
+    position: relative;    
+}
+
+.slider-controls-wrap{
+    position: absolute;
+    bottom: 25px;
+}
+
+
+.slide{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
 
 .slide-1{
     background: url("../img/big1.png") center no-repeat;
 }
 
 .slide-2{
+    display: none;
     background: url("../img/big2.png")center no-repeat;    
 }
 
 .slide-3{
+    display: none;
     background: url("../img/big3.png")center no-repeat;   
 }
 
-.slider-control {
+.slider-control {    
     width: 21px;
     height: 21px;
     border-radius: 50%;
     margin-right: 8px;
     border: 2px solid #ffffff;
     font-size: 0;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: rgba(255, 255, 255, 1);    
 }
 
 .other-slide{
@@ -281,10 +377,13 @@ img {
     background-color: rgba(255, 255, 255, 0); 
 }
 
-.other-slide:hover,
-.other-slide:focus{
-    outline: none; 
+.other-slide:hover {    
     background-color: rgba(255, 255, 255, 0.4); 
+}
+
+
+.other-slide:active{
+    background-color: rgba(255, 255, 255, 1); 
 }
 
 .slide p{
@@ -304,13 +403,25 @@ img {
     border-radius: 40px;    
 }
 
+.main-promo{
+    display: flex;
+    justify-content: space-between;    
+}
+
 .promo{
-    width: 560px;
-    min-height: 230px;
+    padding: 20px;
+    width: 520px;
+    min-height: 190px;
     font-size: 18px;
     line-height: 22px;
     font-weight: 700;
     border-radius: 14px;
+    margin-bottom: 40px;
+}
+
+.promo p{
+    margin: 16px 0;
+    padding: 0;
 }
 
 .promo b{
@@ -331,14 +442,21 @@ img {
 
 
 .breadcrumbs{
+    display: flex;
+    margin: 0;
+    padding: 0;
     list-style: none;
+    
+    
 }
 
 .breadcrumbs-point{
     font-size: 14px;
     line-height: 16px;
     font-weight: 400;  
-    color: #ffffff;    
+    color: #ffffff; 
+    margin-right: 20px;
+    position: relative;
 }
 
 
@@ -346,48 +464,153 @@ img {
     color: #ffffff;    
 }
 
+.breadcrumbs-point a::after{                        /* в макете другие стрелочки назначение шрифта не помогает*/
+    content: ">>";                      
+    position: absolute;
+    top: 0;
+    right: -20px;
+    font-family: "Roboto", "Arial", sans-serif;
+    font-size: 15px;
+    color: red;
+}
+
+
 
 .catalog-title{
     margin: 0;
+    padding: 0;
     font-size: 35px;
     line-height: 41px;
-    font-weight: 700;      
+    font-weight: 700; 
+    margin-bottom: 30px;
 }
 
+.filters-form-wrap fieldset{
+    border: none;
+}
+
+/* ---------- Фильтры ----------*/
+
 .filters-form-wrap{
+    display: flex;
+    flex-direction: column;
     font-size: 16px;
     line-height: 18px;
     font-weight: 500;  
-    color: #ffffff;   
+    color: #ffffff;
+    margin-bottom: 38px;
 }
+
+.top-filters{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+   
+}
+
+
+.filter-type{
+    width: 195px;
+}
+
+.filter-price{
+    width: 220px;
+}
+
+.filter-fat{
+    width: 415px;
+}
+
+.low-filters{
+    display: flex;
+    
+}
+
+
 
 
 .filters-form-wrap legend{
     font-size: 14px;
-    line-height: 16px;  
-    
+    line-height: 16px;      
 }
+
+/* ---------- Фильтры ----------*/
+
+
+
 
 .catalog-list{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
     list-style: none;
+    margin-bottom: 40px;
+       
 }
 
-.catalog-item{    
+.catalog-item{ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    position: relative;
     width: 267px;                
-    margin-right: 26px;
+    margin-right: 26px;    
 }
+
+.catalog-item:nth-child(4n){
+   margin-right: 0; 
+}
+
+.catalog-item:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.2);   /* как сделать при наведении что бы элемент не двигал другие и имел больший радиус обводки ?! */
+}
+
+.hit::before{
+    content: "";
+    position: absolute;
+    width: 61px;
+    height: 61px;
+    top: 0;
+    left: 0;
+    background: url("../img/hit.svg");
+}
+
+.item-title {
+    order: 1;
+}
+
 
 .item-title a{
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
     font-size: 16px;
     line-height: 22px;
     font-weight: 500;
-    color: #ffffff;    
+    color: #ffffff; 
 }
+
+
+
+.item-description img{
+    border-radius: 50%;
+}
+
+.catalog-item p{
+    margin: 0;
+    padding: 0;
+}
+
 
 .product-price {
     font-size: 35px;
     line-height: 45px;
-    font-weight: 700;  
+    font-weight: 700;
+    margin-right: auto;
 }
 
 
@@ -398,18 +621,19 @@ img {
     color: #323232; 
     border-radius: 15px;    
     padding: 26px 20px;
+    margin-bottom: 40px;
     background: #f0e4cc url("../img/wafer-bg.jpg") repeat;    
 }
 
 .advantages-title{
+    margin: 0;
+    padding: 0;
     font-size: 24px;
     line-height: 30px;
     font-weight: 500;
-    margin: 0;
-    
 }
 
-/* -------------------- преимущества----
+/* -------------------- преимущества----*/
 .advantages{
     display: inline-block;
     position: relative;
@@ -465,18 +689,31 @@ img {
 }
 
 
- -------------------- преимущества----*/
+ /*-------------------- преимущества----*/
 
+.user-content{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
 
-.news{ 
+.news{
+    padding: 25px 20px;
+    padding-right: 250px;  /* ?? как это сделать резиново */
+    box-sizing: border-box;
     width: 560px;
     min-height: 220px;
     font-size: 16px;
     line-height: 22px;
     font-weight: 500;
-    color: #323232;
+    color: #5a5a5a;
     background: #ffffff url(../img/strawberry-bg.jpg)no-repeat;
     border-radius: 14px;   
+}
+
+.news p{
+    margin: 0;
+    padding: 0;
 }
 
 .article-caption{
@@ -486,25 +723,56 @@ img {
     color: #323232;
 }
 
-.subscription-form{
+.wrap-subscription-form{
+    padding: 4px 4px;
+    box-sizing: border-box;
     width: 560px;
     min-height: 220px;
+    background: #ffffff url(../img/post-bg.svg);
+    border-radius: 14px;
+    
+}
+
+.subscription-form{
+    padding: 35px 20px;
+    box-sizing: border-box;
+    height: 100%;
     font-size: 16px;
     line-height: 22px;
     font-weight: 400;
     color: #5a5a5a;
     background-color: #f8f7f4;
-    border-radius: 14px;   
+    border-radius: 14px;
+    
 }
 
+.subscription-form p{
+    margin: 0;
+    padding: 0;
+    margin-bottom: 40px;
+}
+
+.map{
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;    
+}
 
 .map-area{
-    background: url(../img/map.jpg)no-repeat;
+    width: 1200px;
+    height: 430px;          
+    background: url(../img/map.jpg)no-repeat;    
 }
 
+
+
 .map-info{
-    width: 303px;
-    min-height: 305px;
+    position: absolute;
+    padding: 30px 25px;
+    top: 65px;
+    right: 27px;
+    width: 243px;
+    min-height: 255px;
     font-size: 14px;
     line-height: 20px;
     font-weight: 400;
@@ -512,7 +780,6 @@ img {
     background-color: rgba(255, 255, 255, 0.98); 
     border-radius: 14px;       
 }
-
 
 .map-info b{
     font-size: 18px;
@@ -530,32 +797,89 @@ img {
 
 
 .pagination-list{
+    display: flex;
+    margin: 0;
+    padding: 0;
     list-style: none;
+    position: relative;
     font-size: 16px;
     line-height: 18px;
     font-weight: 500;
 }
 
 .pagination-item a{
-
+    display: inline-block;
+    text-align: center;
     color: #ffffff;
     text-decoration: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 14px;
+    margin-right: 4px;
 }
 
 .pagination-item-current a{
     display: inline-block;
-    width: 28px;
-    height: 28px;
+    text-align: center;    
+    padding: 5px 10px;
+    border-radius: 14px;
     color: #323232;
-    background: #ffffff;
-    border-radius: 50%;
+    background-color: #ffffff;    
+}
+
+.pagination-item-prev,
+.pagination-item-next{
+    font-size: 0;
 }
 
 
+.pagination-item-prev::before{
+    content: "<";                      /* на макете другие стелочки*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 15px;
+    color: red;
+}
+
+
+.pagination-item a:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+
+.pagination-item a:active{
+    color: #323232;
+    background-color: #ffffff;  
+}
+
 /* ------------------------ FOOTER ------------------------*/
+
+.main-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items:flex-end;
+    padding-top:18px;
+    padding-bottom: 27px;
+}
+
+.social-list{
+    display: flex;    
+    width: 200px;
+}
+
+.footer-info{
+    width: 350px;    
+}
+
+.developer{
+    width: 200px;   
+}
 
 .social-list,
 .footer-info-list{
+    margin: 0;
+    padding: 0;
     list-style: none;
 }
 
@@ -573,6 +897,12 @@ img {
     border-style: solid;
     border-color: rgba(255, 255, 255, 0.5);       
 }
+
+.social-btn:hover,
+.social-btn:active{
+    border-color: rgba(255, 255, 255, 0.7); 
+}
+
 
 .social-btn-tw{
     background: url(../img/twitter.svg)no-repeat;
@@ -594,8 +924,23 @@ img {
     opacity: 0.8;
 }
 
+.social-btn-tw:hover,
+.social-btn-inst:hover,
+.social-btn-fb:hover,
+.social-btn-vk:hover{
+    opacity: 1;
+}
 
-.footer-info-item a{
+.social-btn-tw:active,
+.social-btn-inst:active,
+.social-btn-fb:active,
+.social-btn-vk:active{
+    opacity: 0.8;
+    box-shadow: inset 0px 2px 1px 0px rgba(136, 136, 136);
+}
+
+
+.footer-info-item a{    
     font-size: 13px;
     line-height: 18px;
     font-weight: 400; 
@@ -606,6 +951,10 @@ img {
    font-weight: 700;  
 }
 
+.footer-info-item a:hover,
+.footer-info-item a:active{
+    color: #ffbc9e;
+}
 
 .developer{
     font-size: 12px;
@@ -618,9 +967,16 @@ img {
     color: #ffffff;    
 }
 
+.developer-name:hover,
+.developer-name:active{
+    color: #ffbc9e;
+}
+
+
 /* ------------------------ POPUP ------------------------*/
 
 .feedback-form{
+    display: none;
    color: #323232; 
    background-color: #f8f7f4;
 }
