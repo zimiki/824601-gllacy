@@ -104,7 +104,7 @@
                <div class="top-filters">
                 <fieldset class="filter-type">
                     <legend>Сортировка:</legend>
-                    <select name="select-type">
+                    <select name="select-type filter-wrap">
                             <option selected="selected">по популярности</option>
                             <option>сначала недорогие</option>
                             <option>сначала дорогие</option> 
@@ -112,7 +112,7 @@
                     </select> 
                 </fieldset>       
 
-                <fieldset class="filter-price"> 
+                <fieldset class="filter-price "> 
                       <legend><span>Цена:</span>
                               <input type="text" name="min-price-value" value="100" aria-label="Минимальная цена">
                               <span>руб. - </span>
@@ -130,23 +130,23 @@
 
                 <fieldset class="filter-fat"> 
                     <legend>Жирность:</legend>
-                    <ul>
-                        <li class="filter-option"> 
+                    <ul class="filter-fat-list">
+                        <li class="filter-fat-option"> 
                            <label>
                               <input class="visually-hidden" type="radio" name="fat-value" value="0"> 0%
                            </label>  
                         </li>
-                        <li class="filter-option">
+                        <li class="filter-fat-option">
                             <label>
                                 <input class="visually-hidden" type="radio" name="fat-value" value="10" checked>10%
                             </label>
                         </li>
-                        <li class="filter-option">
+                        <li class="filter-fat-option">
                             <label>
                                 <input class="visually-hidden" type="radio" name="fat-value" value="30"> 30%
                             </label>
                         </li>
-                        <li class="filter-option"> 
+                        <li class="filter-fat-option"> 
                            <label>
                                 <input class="visually-hidden" type="radio" name="fat-value" value="30-and-more"> выше 30%
                             </label>
@@ -157,37 +157,37 @@
                 
                                 
                 <div class="low-filters">
-                <fieldset class="filter-fillers">
-                    <legend>Наполнители:</legend>
-                    <ul class="filter-fillers-list">
-                        <li class="filter-fillers-item">
-                            <label>
-                                <input class="visually-hidden" type="checkbox" name="chocolate" value="chocolate" checked>шоколадные
-                            </label>  
-                        </li>
-                        <li class="filter-fillers-item">
-                            <label>
-                                <input class="visually-hidden" type="checkbox"  name="sugar" value="sugar" checked>сахарные присыпки
-                            </label>
-                        </li>
-                        <li class="filter-fillers-item">
-                            <label>
-                                <input class="visually-hidden" type="checkbox"  name="fruits" value="fruits">фрукты
-                            </label>
-                        </li>
-                        <li class="filter-fillers-item">
-                            <label>
-                                <input class="visually-hidden" type="checkbox"  name="syrup" value="syrup">сиропы
-                            </label>
-                        </li>
-                        <li class="filter-fillers-item">
-                            <label>
-                                <input class="visually-hidden" type="checkbox"  name="jam" value="jam">джемы
-                            </label>
-                        </li>
-                    </ul>  
-                </fieldset>  
-                <button class="filters-button" type="submit">Применить</button>
+                    <fieldset class="filter-fillers">
+                        <legend>Наполнители:</legend>
+                        <ul class="filter-fillers-list">
+                            <li class="filter-fillers-item">
+                                <label>
+                                    <input class="visually-hidden" type="checkbox" name="chocolate" value="chocolate" checked>шоколадные
+                                </label>  
+                            </li>
+                            <li class="filter-fillers-item">
+                                <label>
+                                    <input class="visually-hidden" type="checkbox"  name="sugar" value="sugar" checked>сахарные присыпки
+                                </label>
+                            </li>
+                            <li class="filter-fillers-item">
+                                <label>
+                                    <input class="visually-hidden" type="checkbox"  name="fruits" value="fruits">фрукты
+                                </label>
+                            </li>
+                            <li class="filter-fillers-item">
+                                <label>
+                                    <input class="visually-hidden" type="checkbox"  name="syrup" value="syrup">сиропы
+                                </label>
+                            </li>
+                            <li class="filter-fillers-item">
+                                <label>
+                                    <input class="visually-hidden" type="checkbox"  name="jam" value="jam">джемы
+                                </label>
+                            </li>
+                        </ul>  
+                    </fieldset>  
+                    <button class="filters-button" type="submit">Применить</button>
                 </div>
             </form>                
           </div>

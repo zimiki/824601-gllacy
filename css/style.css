@@ -31,7 +31,6 @@
 body{
     margin: 0;
     padding: 0;    
-    min-width: 1200px;
     font-family: "Roboto", "Arial", sans-serif;
     font-weight: 400;
     font-size: 16px;
@@ -81,10 +80,11 @@ img {
 } 
 
 .container{
-    width: 1146px;
-    padding-left: 27px;
-    padding-right: 27px;
-    margin: 0 auto;
+    max-width: 1146px;
+    min-width: 846px;
+    padding-left: 2.25%;
+    padding-right: 2.25%;
+    margin: 0 auto;    
 }
 
 
@@ -273,8 +273,6 @@ img {
 }
 
 
-
-
 .login-form-wrap{
     color: #323232; 
     background-color: #f8f7f4;
@@ -389,7 +387,7 @@ img {
 .slide p{
     display: block;
     text-align: center;
-    width: 700px;
+    width: 700px;                       /*  -- какие % -- */
     margin-top: 390px;
     font-size: 60px;
     line-height: 61px;
@@ -403,19 +401,21 @@ img {
     border-radius: 40px;    
 }
 
-.main-promo{
-    display: flex;
-    justify-content: space-between;    
+.colums{
+    display: flex;     
 }
 
-.promo{
-    padding: 20px;
-    width: 520px;
-    min-height: 190px;
-    font-size: 18px;
-    line-height: 22px;
-    font-weight: 700;
-    border-radius: 14px;
+.colum-1{    
+    width: calc((100% - 2.3%) / 2 );  
+    margin-right: 2.3%;    
+}
+
+.colums .colum-1:nth-of-type(2n){
+  margin-right: 0;
+} 
+
+
+.main-promo{
     margin-bottom: 40px;
 }
 
@@ -430,24 +430,28 @@ img {
     font-weight: 700;  
 }
 
-
-.promo-raspberries{
-    background: #944165 url("../img/raspberries-bg.jpg") no-repeat;  
+.promo{
+    padding: 20px;
+    min-height: 190px;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 700;
+    border-radius: 14px;
 }
 
-
-.promo-chocolate{
-    background: #4b2b1f url("../img/chocolate-bg.jpg") no-repeat;  
+.promo-raspberries{  
+    background: #944165 url("../img/raspberries-bg.jpg") no-repeat;      
 }
 
+.promo-chocolate{    
+    background: #4b2b1f url("../img/chocolate-bg.jpg") no-repeat;      
+}
 
 .breadcrumbs{
     display: flex;
     margin: 0;
     padding: 0;
     list-style: none;
-    
-    
 }
 
 .breadcrumbs-point{
@@ -464,17 +468,13 @@ img {
     color: #ffffff;    
 }
 
-.breadcrumbs-point a::after{                        /* в макете другие стрелочки назначение шрифта не помогает*/
-    content: ">>";                      
+.breadcrumbs-point a::after{                      
+    content: "\187";         /*&#187;* что-то не то вставляется*/             
     position: absolute;
     top: 0;
     right: -20px;
-    font-family: "Roboto", "Arial", sans-serif;
-    font-size: 15px;
     color: red;
 }
-
-
 
 .catalog-title{
     margin: 0;
@@ -487,6 +487,8 @@ img {
 
 .filters-form-wrap fieldset{
     border: none;
+    padding: 0;
+    margin: 0;
 }
 
 /* ---------- Фильтры ----------*/
@@ -502,10 +504,18 @@ img {
 }
 
 .top-filters{
+    
     display: flex;
     justify-content: space-between;
+    width: 860px;
     margin-bottom: 15px;
-   
+    align-items: flex-end;
+}
+
+.low-filters{   
+    display: flex;
+    width: 860px;
+    align-items: flex-end;
 }
 
 
@@ -521,22 +531,102 @@ img {
     width: 415px;
 }
 
-.low-filters{
+
+
+.filter-fat-list{
+    margin-left: auto;
+    margin: 0;
+    padding: 0;
+    list-style: none;
     display: flex;
-    
+    padding: 9px 20px;
+    border-radius: 18px;
+    background-color: rgba(255, 255, 255, 0.2);  
+}
+
+.filter-fat-option{
+    padding-left: 30px;
+}
+
+.filter-fillers-list{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;    
+    padding: 9px 20px;
+    border-radius: 18px;
+    background-color: rgba(255, 255, 255, 0.2);  
 }
 
 
-
+.filter-fillers-item{
+    padding-left: 30px;
+}
 
 .filters-form-wrap legend{
     font-size: 14px;
-    line-height: 16px;      
+    line-height: 16px;
+    margin-bottom: 6px;
 }
 
+.range-wrap{
+    position: relative;
+    width: 150px;
+    height: 36px;
+    border-radius: 18px;    
+    background-color: rgba(255, 255, 255, 0.2);  
+}
+
+.range-bar{
+    position: absolute;
+    left: 25px;
+    top: 16px;
+    width: 100px;
+    height: 4px;     
+    background-color: rgba(255, 255, 255, 0.7);  
+}
+
+.price-value{    
+    margin: 0 auto;
+    z-index: 10;
+    width: 70px;
+    height: 4px;    
+    background-color: rgba(255, 255, 255, 1);  
+}
+
+.range-bar-switch{
+    z-index: 11;
+    width: 20px;
+    height: 20px; 
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 1);  
+}
+
+.min-price-switch{
+   position: absolute;
+    left: 40px;
+    top: 8px; 
+}
+
+.max-price-switch{
+    position: absolute;
+    right: 40px;
+    top: 8px; 
+}
+
+.filters-button{
+    margin-left: auto;
+    cursor: pointer;
+    border: 0;
+    padding: 9px 20px;
+    border-radius: 18px;
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.2);  
+}
+
+
+
 /* ---------- Фильтры ----------*/
-
-
 
 
 .catalog-list{
@@ -553,21 +643,67 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-sizing: border-box;
     position: relative;
-    width: 267px;                
-    margin-right: 26px;    
+    width: calc((100% - (2.2% * 3)) / 4 );             
+    margin-right: 2.2%;     
 }
 
 .catalog-item:nth-child(4n){
    margin-right: 0; 
 }
 
+
+
+
+
+
+
+
+
+.catalog-item::after{
+    content: "";
+    display: none;
+    position: absolute;
+    top: -3.8%;
+    left: -3.8%;
+    background-color: rgba(255, 255, 255, 0.2);    
+    z-index: -1;
+    width: calc(100% + 7.6%);
+    height: calc(100% + 7.6%);
+}
+
+a.fast-view{
+    display: none;
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+}
+
+
+
 .catalog-item:hover{
+    z-index: 10;
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 5px;
     box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.2);   /* как сделать при наведении что бы элемент не двигал другие и имел больший радиус обводки ?! */
 }
+
+.catalog-item:hover::after{
+    display: block
+}
+
+.catalog-item:hover > .fast-view{
+    display: block;
+}
+
+
+
+
+
+
+
+
+
 
 .hit::before{
     content: "";
@@ -597,6 +733,8 @@ img {
 
 
 .item-description img{
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
 }
 
@@ -615,6 +753,8 @@ img {
 
 
 .advantages-list{
+    display: flex;
+    flex-wrap: wrap;
     font-size: 16px;
     line-height: 22px;
     font-weight: 400;
@@ -634,14 +774,13 @@ img {
 }
 
 /* -------------------- преимущества----*/
-.advantages{
-    display: inline-block;
-    position: relative;
-    width: 483px;                   
+.advantages{    
+    width: calc((100% - 2.2% - 57px * 2) / 2 ); 
+    position: relative; 
     padding-left: 57px;
     margin: 0;
     margin-top: 20px;
-    margin-right: 20px;
+    margin-right: 2.2%;
 }
 
 .advantages-list p:nth-of-type(2n){
@@ -690,25 +829,26 @@ img {
 
 
  /*-------------------- преимущества----*/
-
 .user-content{
-    display: flex;
-    justify-content: space-between;
     margin-bottom: 40px;
 }
 
-.news{
+.news{    
     padding: 25px 20px;
-    padding-right: 250px;  /* ?? как это сделать резиново */
-    box-sizing: border-box;
-    width: 560px;
-    min-height: 220px;
+    min-height: 170px;
     font-size: 16px;
     line-height: 22px;
     font-weight: 500;
     color: #5a5a5a;
     background: #ffffff url(../img/strawberry-bg.jpg)no-repeat;
-    border-radius: 14px;   
+    border-radius: 14px;    
+}
+
+.wrap-subscription-form{
+    padding: 4px 4px;
+    min-height: 212px;
+    background: url(../img/post-bg.svg) no-repeat;
+    border-radius: 14px;    
 }
 
 .news p{
@@ -723,43 +863,31 @@ img {
     color: #323232;
 }
 
-.wrap-subscription-form{
-    padding: 4px 4px;
-    box-sizing: border-box;
-    width: 560px;
-    min-height: 220px;
-    background: #ffffff url(../img/post-bg.svg);
-    border-radius: 14px;
-    
-}
-
 .subscription-form{
+    height: 100%; /* почему фон не растягивается на высоту родителя?? */
     padding: 35px 20px;
-    box-sizing: border-box;
-    height: 100%;
+           
     font-size: 16px;
     line-height: 22px;
     font-weight: 400;
-    color: #5a5a5a;
+    color: #5a5a5a;    
     background-color: #f8f7f4;
-    border-radius: 14px;
-    
+    border-radius: 14px;    
 }
 
 .subscription-form p{
     margin: 0;
-    padding: 0;
-    margin-bottom: 40px;
+    padding: 0;    
 }
 
 .map{
-    position: relative;
-    width: 1200px;
+    position: relative; 
+    min-width: 900px;
+    max-width: 1200px;
     margin: 0 auto;    
 }
 
-.map-area{
-    width: 1200px;
+.map-area{    
     height: 430px;          
     background: url(../img/map.jpg)no-repeat;    
 }
@@ -838,8 +966,7 @@ img {
     position: absolute;
     top: 0;
     left: 0;
-    font-size: 15px;
-    color: red;
+    font-size: 15px;    
 }
 
 
