@@ -36,9 +36,8 @@ body{
     font-size: 16px;
     line-height: 22px;
     color: #ffffff;
-    background-color: #849d8f;
-/*  background-color: #8996a6;
-    background-color: #9d8b84; */   
+    background-color: #849d8f;   
+    /* background-color: #9d8b84; */   
 }
 
 
@@ -101,7 +100,6 @@ img {
     align-items: flex-start;        
 }
 
-
 .index-logo{
     width: 154px;
     margin-right: 22px;
@@ -117,14 +115,10 @@ img {
     margin-top: 23px;
 }
 
-
-
 .header-info{
     width: 170px;
     margin-left:auto;
 }
-
-
 
 .navigation-item a{
     display: inline-block;
@@ -144,8 +138,7 @@ img {
 
 .navigation-item a:active{
   background-color: #ededed;
-  box-shadow: inset 0px 2px 1px 0px rgba(105, 105, 105, 1);
-  
+  box-shadow: inset 0px 2px 1px 0px rgba(105, 105, 105, 1);  
 }
 
 .navigation-item .curent{
@@ -155,15 +148,33 @@ img {
     text-decoration: none;    
 }
 
+.navigation-item{
+    position: relative;
+}
 
-.type-navigation {
+.navigation-item ul{
     margin: 0;
     padding: 0;
     list-style: none;
+    display: none;
+    position: absolute;
+    top: 50;
+    left: 0;
+    z-index: 10;
 }
 
-.type-navigation-item a{
+.navigation-item:hover > ul{
+    display: block; 
+}
+
+.type-navigation{
+    display: flex;
+    flex-direction: column;
+}
+
+.type-navigation a{
     display: inline-block;
+    padding: 6px 22px;
     font-size: 14px;
     line-height: 16px;
     font-weight: 400;
@@ -172,26 +183,17 @@ img {
 }
 
 .type-navigation-new a{   
-    display: inline-block;
-    font-size: 14px;
-    line-height: 16px;
-    font-weight: 700;    
-    text-decoration: none;
-    color: #323232; 
+    font-weight: 700;        
 }
 
-.type-navigation-new a:hover,
-.type-navigation-item a:hover{
-    background-color: #fbded7;
-    padding: 6px 22px;
+.type-navigation a:hover{
+    background-color: #fbded7;    
     border-radius: 0;
 }
 
-.type-navigation-new a:active, 
-.type-navigation-item a:active {
+.type-navigation a:active{
     background-color: #f6b5a5;
 }
-
 
 .user-block{
     display: flex;
@@ -200,6 +202,9 @@ img {
     margin-top: 23px;    
 }
 
+.user-block-point{
+    position: relative;
+}
 
 .btn-search{
     display: block;
@@ -212,13 +217,21 @@ img {
 
 .btn-search:hover{
     background: #f8f7f4 url(../img/loupe-black.svg) center no-repeat; 
-    
 }
 
+
 .search-form-wrap{
-   display: none;
-   color: #323232; 
-   background-color: #f8f7f4;
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    z-index: 10;
+    color: #323232; 
+    background-color: #f8f7f4;
+}
+
+.user-block-point:hover > .search-form-wrap{
+    display: block;
 }
 
 .user-block-btn{
@@ -269,7 +282,7 @@ img {
 }
 
 .btn-cart:hover::before{
-   background-image: url(../img/basket-red.svg);     
+    background-image: url(../img/basket-red.svg);     
 }
 
 
@@ -277,8 +290,15 @@ img {
     color: #323232; 
     background-color: #f8f7f4;
     display: none;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    z-index: 10;
 }
 
+.user-block-point:hover > .login-form-wrap{
+    display: block;
+}
 
 
 .login-form-option{
@@ -293,8 +313,12 @@ img {
     color: #e84d37;
 }
 
-.cart-list-wrap{
+.cart-list-wrap{         /* это же popup ?? */
     display: none;
+    position: absolute;
+    top: 50px;
+    left: -300px;
+    z-index: 10;
     font-size: 13px;
     line-height: 16px;
     font-weight: 400;
@@ -307,7 +331,6 @@ img {
    line-height: 18px;
    font-weight: 700; 
 }
-
 
 .header-info {
     font-size: 14px;
@@ -401,19 +424,21 @@ img {
     border-radius: 40px;    
 }
 
-.colums{
-    display: flex;     
+.big-list{
+    display: flex; 
+    flex-wrap: wrap;    
 }
 
-.colum-1{    
-    width: calc((100% - 2.3%) / 2 );  
-    margin-right: 2.3%;    
+.big-item{
+    box-sizing: border-box;
+    width: calc(100% /2 - 2.3% /2);  
+    margin-right: 2.3%;
+    margin-bottom: 20px;
 }
 
-.colums .colum-1:nth-of-type(2n){
+.big-list .big-item:nth-child(2n){
   margin-right: 0;
 } 
-
 
 .main-promo{
     margin-bottom: 40px;
@@ -421,7 +446,7 @@ img {
 
 .promo p{
     margin: 16px 0;
-    padding: 0;
+    
 }
 
 .promo b{
@@ -432,7 +457,7 @@ img {
 
 .promo{
     padding: 20px;
-    min-height: 190px;
+    min-height: 230px;
     font-size: 18px;
     line-height: 22px;
     font-weight: 700;
@@ -503,8 +528,7 @@ img {
     margin-bottom: 38px;
 }
 
-.top-filters{
-    
+.top-filters{    
     display: flex;
     justify-content: space-between;
     width: 860px;
@@ -518,7 +542,6 @@ img {
     align-items: flex-end;
 }
 
-
 .filter-type{
     width: 195px;
 }
@@ -530,8 +553,6 @@ img {
 .filter-fat{
     width: 415px;
 }
-
-
 
 .filter-fat-list{
     margin-left: auto;
@@ -696,15 +717,6 @@ a.fast-view{
     display: block;
 }
 
-
-
-
-
-
-
-
-
-
 .hit::before{
     content: "";
     position: absolute;
@@ -718,7 +730,6 @@ a.fast-view{
 .item-title {
     order: 1;
 }
-
 
 .item-title a{
     display: inline-block;
@@ -740,7 +751,7 @@ a.fast-view{
 
 .catalog-item p{
     margin: 0;
-    padding: 0;
+    
 }
 
 
@@ -835,7 +846,7 @@ a.fast-view{
 
 .news{    
     padding: 25px 20px;
-    min-height: 170px;
+    min-height: 220px;
     font-size: 16px;
     line-height: 22px;
     font-weight: 500;
@@ -845,15 +856,22 @@ a.fast-view{
 }
 
 .wrap-subscription-form{
-    padding: 4px 4px;
-    min-height: 212px;
-    background: url(../img/post-bg.svg) no-repeat;
-    border-radius: 14px;    
+    min-height: 220px;    
+    border-width: 4px;
+    border-style: solid;
+    border-color: red;   /*нужно назначить svg  */
+    border-radius: 14px;
+    color: #5a5a5a;    
+    background-color: #f8f7f4;
+    padding: 35px 20px;           
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 400;
+    border-radius: 14px; 
 }
 
 .news p{
-    margin: 0;
-    padding: 0;
+    margin: 0;    
 }
 
 .article-caption{
@@ -863,21 +881,9 @@ a.fast-view{
     color: #323232;
 }
 
-.subscription-form{
-    height: 100%; /* почему фон не растягивается на высоту родителя?? */
-    padding: 35px 20px;
-           
-    font-size: 16px;
-    line-height: 22px;
-    font-weight: 400;
-    color: #5a5a5a;    
-    background-color: #f8f7f4;
-    border-radius: 14px;    
-}
 
-.subscription-form p{
-    margin: 0;
-    padding: 0;    
+.wrap-subscription-form p{
+    margin: 0;      
 }
 
 .map{
@@ -993,6 +999,9 @@ a.fast-view{
 .social-list{
     display: flex;    
     width: 200px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 .footer-info{
@@ -1003,12 +1012,6 @@ a.fast-view{
     width: 200px;   
 }
 
-.social-list,
-.footer-info-list{
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
 
 .social-list a{
     font-size: 0;
@@ -1066,20 +1069,44 @@ a.fast-view{
     box-shadow: inset 0px 2px 1px 0px rgba(136, 136, 136);
 }
 
+.footer-info-list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 400px;
+    margin: 0;
+    padding: 0;
+    list-style: none;   
+}
 
-.footer-info-item a{    
+
+.footer-info-list a{
+    display: inline-block;
+    position: relative;
     font-size: 13px;
     line-height: 18px;
     font-weight: 400; 
     color: #ffffff;     
+    width: 170px;
 }
 
-.footer-info-item .providers{
-   font-weight: 700;  
+
+.footer-info-providers a{   
+    font-weight: 700;  
 }
 
-.footer-info-item a:hover,
-.footer-info-item a:active{
+.footer-info-providers a::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -10px;
+    width: 15px;
+    height: 13px;
+    background: url("../img/heart.svg") no-repeat;
+}
+
+
+.footer-info-list a:hover,
+.footer-info-list a:active{
     color: #ffbc9e;
 }
 
@@ -1088,6 +1115,10 @@ a.fast-view{
     line-height: 18px;
     font-weight: 400; 
     color: #ffffff;       
+}
+
+.developer p{
+    margin: 0;    
 }
 
 .developer-name{
