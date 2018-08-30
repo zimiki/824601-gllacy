@@ -79,13 +79,14 @@ img {
 } 
 
 .container{
-    max-width: 1146px;
-    min-width: 846px;
-    padding-left: 2.25%;
-    padding-right: 2.25%;
-    margin: 0 auto;    
+    max-width: 1200px;
+    min-width: 900px;    
+    margin: 0 auto;
 }
 
+.container-content{    
+    padding: 0 2.25%;  
+}
 
 /* ------------------------ HEADER ------------------------*/
 
