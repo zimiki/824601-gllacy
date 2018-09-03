@@ -37,6 +37,7 @@ body{
     line-height: 22px;
     color: #ffffff;
     background-color: #849d8f;
+    min-width: 900px;    
 }
 
 img {
@@ -44,30 +45,43 @@ img {
     height: auto;
 }
 
-.visually-hidden {           /* поработать над этим взять из лекции */
-    display: none;
-    font-size: 0px;
+.visually-hidden:not(:focus):not(active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden{          
+   position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);     /* что делать с этой строкой? на нее ругается валидотор. я сдела 1 в 1 с лекцией */
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
+
+.page-wrap{
+    width: 100%;
+    z-index: 2;
+}
+        
 
 .index-bg-1{
     color: #ffffff;
     background-color: #849d8f;
-    position: relative;
-    z-index: 2;
-    width: 100%
-}
+    background-position: top;
+ }
 
 .index-bg-2{
     color: #ffffff;
-    background-color: #8996a6;      
+    background-color: #8996a6;
+    background-position: top;
 }
 
 .index-bg-3{
     color: #ffffff;
     background-color: #9d8b84;
-    position: relative;
-    z-index: 10;
-    width: 100%
+    background-position: top;
 }
 
 .btn-red {
@@ -101,12 +115,13 @@ img {
 
 .area{
     box-sizing: border-box;
-    min-width: 150px;
+    width: 100%;
     height: 44px;
     border: 1px solid #d3d3d2;
     border-radius: 5px;
-    background: #ffffff;
+    background: #ffffff;    
     font: inherit;
+   /* font-weight: 700;   как назначить только введеному тексту жирность болд?*/
     padding: 0 15px;
     color: #000000;
 }
@@ -119,7 +134,7 @@ img {
     position: relative;    
     max-width: 1200px;
     min-width: 900px; 
-    margin: 0 auto;    
+    margin: 0 auto;     
 }
 
 .container-content{    
@@ -160,7 +175,7 @@ img {
     margin: 0;
     padding: 0;
     list-style: none; 
-    margin-top: 23px;
+    margin-top: 22px;
 }
 
 .header-info{
@@ -248,7 +263,7 @@ img {
     display: flex;
     flex-direction: column;    
     position: absolute;
-    top: 32px;
+    top: 36px;   /* как сделать как по макету отступ и чтобы не слетал ховер при выборе субменю ??*/
     left: 0;   
     margin: 0;
     padding: 0;
@@ -260,24 +275,20 @@ img {
     overflow: hidden;
 }
 
-
 .navigation-item:hover > ul{
     display: block; 
 }
-
 
 .type-navigation li:hover{
     background-color: #fbded7;    
     border-radius: 0;
 }
 
-
-
 .user-block{
     display: flex;
     width: 285px;
     margin-left:auto;
-    margin-top: 23px;
+    margin-top: 22px;
     justify-content: flex-end;
 }
 
@@ -300,14 +311,19 @@ img {
     background-color: #f8f7f4;  
 }
 
-
 .search-form-wrap{
     display: none;
+    box-sizing: border-box;
     position: absolute;
-    top: 50px;
-    left: 0;    
+    top: 40px;  /* как сделать как по макету отступ и чтобы не слетал ховер при выборе субменю ??*/
+    right: 11px; 
+    width: 340px;
+    height: 85px;
     color: #323232; 
     background-color: #f8f7f4;
+    border-radius: 6px;
+    box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+    padding: 20px 15px;
 }
 
 .user-block-point:hover > .search-form-wrap{
@@ -382,32 +398,52 @@ img {
 
 
 .login-form-wrap{
+    display: none;   
+    position: absolute;
+    box-sizing: border-box;
+    width: 277px;
+    height: 214px;    
+    top: 40px;    /* как сделать как по макету отступ и чтобы не слетал ховер при выборе субменю ??*/
+    right: 11px; 
     color: #323232; 
     background-color: #f8f7f4;
-    display: none;
-    position: absolute;
-    top: 50px;
-    left: 0;    
+    border-radius: 6px;
+    box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+    padding: 20px;
+}
+
+.login-form-wrap form{
+    display: flex;
+    flex-wrap: wrap;    
 }
 
 .user-block-point:hover > .login-form-wrap{
     display: block;
 }
 
+.login-form-wrap input{
+   margin-bottom: 20px;
+}
 
 .login-form-option{
+    width: 122px;
+    margin-left: auto;
+}
+
+
+.login-form-option a{
     font-size: 13px;
-    line-height: 24px;
+    line-height: 23px;
     font-weight: 400;
     color: #323232; 
 }
 
-.login-form-option:hover,
-.login-form-option:active{
+.login-form-option a:hover,
+.login-form-option a:active{
     color: #e84d37;
 }
 
-.cart-list-wrap{         /* это же popup ?? */
+.cart-list-wrap{         
     display: none;
     position: absolute;
     top: 50px;
@@ -460,28 +496,30 @@ img {
 
 .slide{
     width: 100%;
-    height: 800px;
-    background: yellow;    
+    height: 800px;      
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-repeat: no-repeat;
 }
 
 
-.slide-1{ 
-    display: none;
+.slide-1{
+    
     background-image: url("../img/big1.png");
+    background-position: 60px 0px;
 }
 
 .slide-2{
     display: none;
-    background: url("../img/big2.png");    
+    background: url("../img/big2.png");
+    background-position: 60px 0px;
 }
 
 .slide-3{
+    display: none;
     background-image: url("../img/big3.png");
-    background-position: center; 
-      
+    background-position: 60px 0px;
 }
 
 .slide p{
@@ -499,8 +537,8 @@ img {
 
 .slider-controls-wrap{
     position: absolute;
-    top: 300px;
-    left: 0;
+    top: 555px;
+    left: 2.25%;
 }
 
 
@@ -592,7 +630,7 @@ img {
     background: #4b2b1f url("../img/chocolate-bg.jpg") no-repeat;      
 }
 
-.breadcrumbs-list{
+.breadcrumbs-list{              /* это должно быть в хэдере в разметке html ?*/
     display: flex;
     margin: 0;
     padding: 0;
@@ -614,11 +652,10 @@ img {
 }
 
 .breadcrumbs-point a::after{                      
-    content: "\187";         /*&#187;* что-то не то вставляется*/             
+    content: "»";                  
     position: absolute;
     top: 0;
-    right: -20px;
-    color: red;
+    right: -15px;    
 }
 
 .catalog-title{
@@ -694,15 +731,44 @@ img {
     padding: 0;
     list-style: none;
     display: flex;    
-    padding: 9px 20px;
-    border-radius: 18px;
+    padding: 9px 17px;
+    border-radius: 17px;
     background-color: rgba(255, 255, 255, 0.2);  
 }
 
 
 .filter-fillers-item{
+    position: relative;
     padding-left: 30px;
+    padding-right: 24px;
 }
+
+.filter-fillers-item:last-child{
+    padding-right: 0px;
+}
+
+.filter-fillers-item::before{
+    content: "";
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #ffffff;
+    border-radius: 3px;
+}
+
+/*.filter-fillers-item input[type="checkbox"]:checked::before{
+    content: "";
+    position: absolute;
+    width: 27px;
+    height: 23px;
+    left: -2px;
+    top: -2px;
+    background-image: url(../img/checkbox-on.svg);
+}*/
+
+
 
 .filters-form-wrap legend{
     font-size: 14px;
@@ -757,14 +823,29 @@ img {
 
 .filters-button{
     margin-left: auto;
-    cursor: pointer;
-    border: 0;
-    padding: 9px 20px;
+    cursor: pointer;    
+    padding: 7px 29px;
+    font-weight: 500;
+    border: 2px solid #ffffff;
     border-radius: 18px;
     color: #ffffff;
     background-color: rgba(255, 255, 255, 0.2);  
 }
 
+.filters-button:hover{
+    border: 0;
+    padding: 9px 31px;
+    color: #323232;
+    background-color: #fbfcfb; 
+}
+
+.filters-button:active{
+    border: 0;
+    padding: 9px 31px;
+    color: #323232;
+    background-color: #eaeaea;
+    box-shadow: inset 0px 3px 2px 0px rgba(105, 105, 105, 1);
+}
 
 
 /* ---------- Фильтры ----------*/
@@ -776,7 +857,7 @@ img {
     margin: 0;
     padding: 0;
     list-style: none;
-    margin-bottom: 40px;
+    margin-bottom: 44px;
        
 }
 
@@ -996,24 +1077,34 @@ a.fast-view{
     border-radius: 14px;    
 }
 
+
 .wrap-subscription-form{
-    position: relative;
-    min-height: 220px;    
-    border-width: 4px;
-    border-style: solid;
-    border-color: red;   /*нужно назначить svg  */
+    background: url(../img/post-bg.svg)no-repeat;
+    min-height: 220px; 
     border-radius: 14px;
+    padding: 4px;
+}
+
+
+.subscription-form{
+    position: relative;
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-between;
     color: #5a5a5a;    
     background-color: #f8f7f4;
-    padding: 15px 20px;           
+    border-radius: 14px;
+    padding: 30px 20px;           
     font-size: 16px;
     line-height: 22px;
     font-weight: 400;
-    border-radius: 14px; 
+    height: calc(100% - 60px);
+    
 }
 
 .wrap-subscription-form .area{
-    width: 230px;
+    width: 100%;
+    margin-right: 11px;
 }
 
 .news p{
@@ -1033,12 +1124,14 @@ a.fast-view{
     margin: 0;
 }
 
-.wrap-subscription-form .btn-red{
-    position: absolute;
-    bottom: 40px;
-    right: 27px;
+.subscription-form form{
+    display: flex;
 }
 
+
+.subscription-form .btn-red{
+    margin-left: auto;
+}
 
 
 .map{
@@ -1055,14 +1148,12 @@ a.fast-view{
 }
 
 
-
 .map-info{
     position: absolute;
-    padding: 30px 25px;
-    top: 65px;
-    right: 27px;
+    right: 2.25%;
+    bottom: 64px;
+    padding: 30px 25px;       
     width: 243px;
-    min-height: 255px;
     font-size: 14px;
     line-height: 20px;
     font-weight: 400;
@@ -1071,13 +1162,26 @@ a.fast-view{
     border-radius: 14px;       
 }
 
+.map-info p{
+    margin: 0;
+    margin-bottom: 17px; 
+}
+
+.map-info p:last-of-type{
+    margin-bottom: 22px;
+}
+
+
 .map-info b{
     font-size: 18px;
     line-height: 24px;
-    font-weight: 700;  
+    font-weight: 700;    
 }
 
 .phone-map{
+    display: inline-block;
+    margin-top: 4px;
+    margin-bottom: 4px;
     font-size: 18px;
     line-height: 22px;
     font-weight: 700; 
@@ -1087,48 +1191,67 @@ a.fast-view{
 
 
 .pagination-list{
-    display: flex;
+    display: flex; 
+    justify-content: flex-end;
     margin: 0;
-    padding: 0;
+    padding: 0 20px;
     list-style: none;
     position: relative;
     font-size: 16px;
     line-height: 18px;
     font-weight: 500;
+    margin-bottom: 31px;
 }
 
 .pagination-item a{
-    display: inline-block;
+    display: inline-block;    
     text-align: center;
     color: #ffffff;
     text-decoration: none;
     cursor: pointer;
-    padding: 5px 10px;
+    padding: 5px 9px;
     border-radius: 14px;
-    margin-right: 4px;
+    margin-right: 2px;
 }
 
 .pagination-item-current a{
     display: inline-block;
     text-align: center;    
-    padding: 5px 10px;
+    padding: 5px 9px;
     border-radius: 14px;
     color: #323232;
-    background-color: #ffffff;    
+    background-color: #ffffff;
+    margin-right: 2px;
 }
 
 .pagination-item-prev,
 .pagination-item-next{
+    position: relative;
     font-size: 0;
 }
 
 
 .pagination-item-prev::before{
-    content: "<";                      /* на макете другие стелочки*/
+    content: "";                     
     position: absolute;
-    top: 0;
-    left: 0;
-    font-size: 15px;    
+    top: 7px;
+    left: -22px;
+    width: 8px;
+    height: 12px;
+    background-image: url(../img/prev.svg); 
+    transform: rotate(180deg);
+    
+}
+
+.pagination-item-next::after{
+    content: "";                     
+    position: absolute;
+    top: 7px;
+    right: -15px;
+    width: 8px;
+    height: 12px;
+    background-image: url(../img/next.svg); 
+    cursor: pointer;
 }
 
 
@@ -1145,6 +1268,7 @@ a.fast-view{
 /* ------------------------ FOOTER ------------------------*/
 
 .main-footer{
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
     display: flex;
     justify-content: space-between;
     align-items:flex-end;

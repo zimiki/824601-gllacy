@@ -8,7 +8,7 @@
    </head>
   <body>      
   <!--.........................HEADER................................-->
-    <div class="page-wrap index-bg-3"> 
+    <div class="page-wrap index-bg-1"> 
      <header class="index-header container">
       <div class="main-header container-content">
         <div class="header-navigation">
@@ -35,7 +35,7 @@
                     <a class="btn-search" href="#"><span class="visually-hidden">Поиск по сайту</span></a>
                     <div class="search-form-wrap">
                         <form action="https://echo.htmlacademy.ru" method="post" name="search-form">
-                            <input class="search-input" type="search" name="search" placeholder="Что ищем?">
+                            <input class="area" type="search" name="search" placeholder="Что ищем?">
                         </form>
                     </div>
                 </div>
@@ -44,12 +44,14 @@
                     <a class="user-block-btn btn-login" href="#">Вход <span class="visually-hidden">в личный кабинет</span></a>
                     <div class="login-form-wrap">
                          <form action="https://echo.htmlacademy.ru" method="post" name="login-form" >
-                            <input class="login-form-input" type="email" name="login-email" placeholder="Электронная почта" aria-label="Ваша электронная почта">
-                            <input class="login-form-input" type="password" name="login-password" placeholder="Пароль"  aria-label="Ваш пароль">
-                        </form>
-                        <a class="login-form-option" href="#">Забыли пароль?</a>
-                        <a class="login-form-option" href="#">Новая регистрация</a>
-                        <button class="btn-red" type="submit">Войти</button>
+                            <input class="area" type="email" name="login-email" placeholder="Электронная почта" aria-label="Ваша электронная почта">
+                            <input class="area" type="password" name="login-password" placeholder="Пароль"  aria-label="Ваш пароль">
+                            <button class="btn-red" type="submit">Войти</button>
+                        <div class="login-form-option">                        
+                            <a href="#">Забыли пароль?</a>
+                            <a href="#">Новая регистрация</a>
+                        </div>
+                       </form>  
                     </div>
                 </div>
 
@@ -164,13 +166,15 @@
                     <h3><a class="article-caption" href="#">10 способов сервировки фруктовых щербетов к столу</a></h3>
                 </article>            
             
-                <div class="big-item wrap-subscription-form">                   
+                <div class="big-item wrap-subscription-form"> 
+                    <div class="subscription-form">
                     <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного,
                     что у нас происходит. Обещаем не спамить и не слать всякой не нужной ерунды. Честно =)</p>
                     <form action="https://echo.htmlacademy.ru" method="post" name="subscription-form">
                             <input class="area" type="email" name="subscription-email" placeholder="Электронная почта" aria-label="Оформить подписку">
                             <button class="btn-red" type="submit">Отправить</button>
                     </form>
+                    </div>
                 </div>
             </div>
         </section>
@@ -181,13 +185,15 @@
             <h2 class="visually-hidden">Карта</h2>
             <div class="map-area">
             </div>
+            <div class="container">
             <div class="map-info">
-                <p>Адрес главного офиса и офлайн магазина:
-                <b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b>
-                Для заказов по телефону:
-                <a class="phone-map" href="tel:88124502525">8 812 450 25 25</a>
+                <p>Адрес главного офиса и офлайн магазина:<br>
+                <b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b></p>
+                <p>Для заказов по телефону:<br>
+                <a class="phone-map" href="tel:88124502525">8 812 450 25 25</a><br>
                 (c 10 до 20 ежедневно)</p>
                 <a class="btn-red" href="#" >Форма обратной связи</a>
+            </div>
             </div>
         </section>
         
@@ -196,30 +202,32 @@
 <!--.........................FOOTER................................-->
      
     <footer class="container">
-      <div class="main-footer container-content">
-        <div class="social">
-              <ul class="social-list">
-                <li><a class="social-btn social-btn-tw" href="#">Twitter</a></li>
-                <li><a class="social-btn social-btn-inst" href="#">Instagram</a></li>
-                <li><a class="social-btn social-btn-fb" href="#">Facebook</a></li>
-                <li><a class="social-btn social-btn-vk" href="#">ВКонтакте</a></li>
-            </ul>
-        </div>
-        
-         <nav class="footer-info">
-            <ul class="footer-info-list">
-                <li class="footer-info-providers"><a href="#">Для поставщиков</a></li>
-                <li><a href="#">Наши документы</a></li>
-                <li><a href="#">О производстве</a></li> 
-                <li><a href="#">Экологические стандарты</a></li>            
-            </ul>
-        </nav>
-        
-        <div class="developer">
-                <div class="developer-logo"><img src="img/logo-htmlacademy.svg" width="109" height="37" alt="HTML Academy"></div>
-                <p>Сделано в <a class="developer-name" href="#">HTML Academy</a> © 2017</p>
-        </div>
-      </div>    
+      <div class="container-content">
+          <div class="main-footer">
+            <div class="social">
+                <ul class="social-list">
+                    <li><a class="social-btn social-btn-tw" href="#">Twitter</a></li>
+                    <li><a class="social-btn social-btn-inst" href="#">Instagram</a></li>
+                    <li><a class="social-btn social-btn-fb" href="#">Facebook</a></li>
+                    <li><a class="social-btn social-btn-vk" href="#">ВКонтакте</a></li>
+                </ul>
+            </div>
+
+            <nav class="footer-info">
+                <ul class="footer-info-list">
+                    <li class="footer-info-providers"><a href="#">Для поставщиков</a></li>
+                    <li><a href="#">Наши документы</a></li>
+                    <li><a href="#">О производстве</a></li> 
+                    <li><a href="#">Экологические стандарты</a></li>
+                </ul>
+            </nav>
+
+            <div class="developer">
+                    <div class="developer-logo"><img src="img/logo-htmlacademy.svg" width="109" height="37" alt="HTML Academy"></div>
+                    <p>Сделано в <a class="developer-name" href="#">HTML Academy</a> © 2017</p>
+            </div> 
+         </div>
+      </div> 
     </footer>
          
 <!--.........................POPUP..................................-->        
