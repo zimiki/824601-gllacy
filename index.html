@@ -8,7 +8,7 @@
    </head>
   <body>      
   <!--.........................HEADER................................-->
-    <div class="page-wrap index-bg-1"> 
+    <div class="page-wrap index-bg-2"> 
      <header class="index-header container">
       <div class="main-header container-content">
         <div class="header-navigation">
@@ -16,6 +16,7 @@
             <nav class="header-navigation">   
                 <ul class="site-navigation">
                     <li class="navigation-item"><a class="main-menu" href="catalog.html">Каталог</a>
+                        <div class="hover-line">
                         <ul class="type-navigation">
                             <li class="type-navigation-new"><a href="#">Новинки</a></li>
                             <li><a href="catalog.html">Сливочное</a></li>
@@ -23,6 +24,7 @@
                             <li><a href="#">Фруктовый лёд</a></li>
                             <li><a href="#">Мелорин</a></li>
                         </ul>
+                        </div>
                     </li>
                     <li class="navigation-item"><a class="main-menu" href="#">Доставка и оплата</a></li>
                     <li class="navigation-item"><a class="main-menu" href="#">О компании</a></li>
@@ -33,16 +35,19 @@
 
                 <div class="user-block-point">
                     <a class="btn-search" href="#"><span class="visually-hidden">Поиск по сайту</span></a>
+                    <div class="hover-line position-search-form">
                     <div class="search-form-wrap">
                         <form action="https://echo.htmlacademy.ru" method="post" name="search-form">
                             <input class="area" type="search" name="search" placeholder="Что ищем?">
                         </form>
                     </div>
+                    </div>
                 </div>
 
                 <div class="user-block-point">
                     <a class="user-block-btn btn-login" href="#">Вход <span class="visually-hidden">в личный кабинет</span></a>
-                    <div class="login-form-wrap">
+                    <div class="hover-line position-login-form">
+                    <div class="login-form-wrap">                        
                          <form action="https://echo.htmlacademy.ru" method="post" name="login-form" >
                             <input class="area" type="email" name="login-email" placeholder="Электронная почта" aria-label="Ваша электронная почта">
                             <input class="area" type="password" name="login-password" placeholder="Пароль"  aria-label="Ваш пароль">
@@ -53,6 +58,7 @@
                         </div>
                        </form>  
                     </div>
+                 </div>
                 </div>
 
                 <div class="user-block-point" >
@@ -150,7 +156,7 @@
         
         
         <section class="advantages-list">
-            <h3 class="advantages-title">Магазин Глейси - это онлайн и офлайн магазин по продаже мороженного собсвенного производства на развес</h3>
+            <h3 class="advantages-title">Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собсвенного производства на развес</h3>
                 <p class="advantages "> Все наше мороженное изготавливается на собственном производстве,
                     с использованием современного оборудования и проверенных временем технологий.</p>
                 <p class="advantages"> Закупка ингридиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
@@ -169,7 +175,7 @@
                 <div class="big-item wrap-subscription-form"> 
                     <div class="subscription-form">
                     <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного,
-                    что у нас происходит. Обещаем не спамить и не слать всякой не нужной ерунды. Честно =)</p>
+                    что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
                     <form action="https://echo.htmlacademy.ru" method="post" name="subscription-form">
                             <input class="area" type="email" name="subscription-email" placeholder="Электронная почта" aria-label="Оформить подписку">
                             <button class="btn-red" type="submit">Отправить</button>
@@ -187,12 +193,12 @@
             </div>
             <div class="container">
             <div class="map-info">
-                <p>Адрес главного офиса и офлайн магазина:<br>
-                <b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b></p>
-                <p>Для заказов по телефону:<br>
-                <a class="phone-map" href="tel:88124502525">8 812 450 25 25</a><br>
-                (c 10 до 20 ежедневно)</p>
-                <a class="btn-red" href="#" >Форма обратной связи</a>
+                <p>Адрес главного офиса и офлайн магазина:</p>
+                <b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b>
+                <p>Для заказов по телефону:</p>
+                <a class="phone-map" href="tel:88124502525">8 812 450 25 25</a>
+                <p>(c 10 до 20 ежедневно)</p>
+                <a class="btn-red" href="#">Форма обратной связи</a>
             </div>
             </div>
         </section>
@@ -230,23 +236,20 @@
       </div> 
     </footer>
          
-<!--.........................POPUP..................................-->        
+<!--.........................POPUP..................................-->
+    <div class="popup-overlay"></div>
            
     <div class="feedback-form">
         <button class="close" type="button">Закрыть</button>
-        <h3 class="feedback-form-title"> Мы обязательно вам ответим! </h3>
-        
- <!--.... форма  для отзывов начало ...........-->
-        
+        <h3 class="feedback-form-title"> Мы обязательно вам ответим! </h3>   
         <form action="https://echo.htmlacademy.ru" method="post" name="feedback" >
-            <input class="feedback-short-input" type="text"   name="feedback-name" placeholder="Как вас зовут?" aria-label="Ваше имя">
-            <input class="feedback-short-input" type="email" name="feedback-email" placeholder="Ваша почта для ответа?" aria-label="Ваша почта">
-            <input class="feedback-long-input" type="text"  name="feedback-text" placeholder="Напишите что-нибудь..." aria-label="Ваш отзыв">
+            <input class="area feedback-area1" type="text"   name="feedback-name" placeholder="Как вас зовут?" aria-label="Ваше имя">
+            <input class="area feedback-area1" type="email" name="feedback-email" placeholder="Ваша почта для ответа?" aria-label="Ваша почта">
+            <input class="area feedback-area2" type="text"  name="feedback-text" placeholder="Напишите что-нибудь..." aria-label="Ваш отзыв">
         </form>
-        <button class="btn-red" type="submit">Отправить</button>
-<!--.... форма  для отзывов конц..........-->
-                
-    </div>   
+        <button class="btn-red" type="submit">Отправить</button>                
+    </div> 
+        
    </div>  
   </body>
 </html>
