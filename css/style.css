@@ -332,7 +332,7 @@ img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 285px;
+    min-width: 285px;
     margin-left:auto;
     margin-top: 22px;
     -webkit-box-pack: end;
@@ -431,9 +431,14 @@ img {
     background-image: url(../img/basket.svg);     
 }
 
-.btn-cart-empty:hover{                   /* не поняла свойство рещеткой это как ? */
+.btn-cart-empty:hover{                   
    color: #323232;
-   background-color: #f8f7f4;  
+   background-color: #f8f7f4;
+     
+}
+
+.btn-cart-empty:hover::before{ 
+   background-image: url(../img/basket-black.svg);       
 }
 
 .btn-cart-noempty{
@@ -728,7 +733,7 @@ img {
 
 .slider-controls-wrap{
     position: absolute;
-    top: 561px;
+    bottom: 60px;
     left: 2.25%;
 }
 
@@ -787,11 +792,12 @@ img {
 } 
 
 .main-promo{
-    margin-bottom: 20px;
+    margin-bottom: 20px;    
 }
 
 .promo p{
     margin: 16px 0;
+    margin-bottom: 45px;
     
 }
 
@@ -801,18 +807,14 @@ img {
     font-weight: 700;  
 }
 
-.promo a{
-    position: absolute;
-    bottom: 24px;
-    right: 22px;
-}
 
-.promo{
-    position: relative;
+.promo{ 
+    display: flex;
+    flex-direction: column;
     padding-top: 15px; 
     padding-bottom: 20px;
     padding-left: 20px;
-    padding-right: 18px;
+    padding-right: 21px;
     min-height: 230px;
     font-size: 18px;
     line-height: 22px;
@@ -820,12 +822,18 @@ img {
     border-radius: 14px;
 }
 
+.promo-btn-wrap .btn-red{     
+    float: right;
+}
+
 .promo-raspberries{  
-    background: #944165 url("../img/raspberries-bg.jpg") no-repeat;      
+    background: #944165 url("../img/raspberries-bg.jpg") no-repeat;
+    background-size: cover;
 }
 
 .promo-chocolate{    
-    background: #4b2b1f url("../img/chocolate-bg.jpg") no-repeat;      
+    background: #4b2b1f url("../img/chocolate-bg.jpg") no-repeat;
+    background-size: cover;
 }
 
 .breadcrumbs-list{
@@ -879,11 +887,8 @@ img {
 /* ---------- Фильтры ----------*/
 
 .filters-form-wrap{
-    
-    display: -webkit-box;
-    
-    display: -ms-flexbox;
-    
+    display: -webkit-box;    
+    display: -ms-flexbox;    
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1106,10 +1111,9 @@ img {
     list-style: none;
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex; 
-    -webkit-box-pack: justify; 
-        -ms-flex-pack: justify; 
-            justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
     padding: 9px 17px;
     border-radius: 17px;
     background-color: rgba(255, 255, 255, 0.2);  
@@ -1117,11 +1121,19 @@ img {
 
 .filter-fillers-item{
     position: relative;
-    padding-left: 30px;    
+    padding-left: 30px;
+    margin-left: 23px;
+   
 }
 
-.filter-fillers-item:last-child{
-    padding-right: 0px;
+.filter-fillers-item:first-child{
+    margin-left: 0;
+}
+
+.filter-fillers-item:nth-child(6n),
+.filter-fillers-item:nth-child(7n),
+.filter-fillers-item:nth-child(8n){
+    margin-top: 15px;
 }
 
 .checbox-indicator::before{
@@ -1182,6 +1194,7 @@ img {
     margin: 0;
     padding: 0;
     list-style: none;
+    margin-bottom: 8px;
 }
 
 .catalog-item{ 
@@ -1208,12 +1221,15 @@ img {
 .catalog-item-view{
     width: 100%;    
     position: relative;
+    height: 0;
+    padding-top: 100%;
     
 }
 
 .product-price{
+    width: 100%;
     position: absolute;
-    bottom: 15px;                
+    bottom: 9px;                
     left: 0;
     font-size: 45px;
     line-height: 45px;    
@@ -1222,6 +1238,7 @@ img {
 }
 
 .product-price span{
+    position: relative;
     font-size: 28px;
     line-height: 45px;    
     font-weight: 700;
@@ -1231,7 +1248,7 @@ img {
 .product-price span::before{
     content: "";
     position: absolute;
-    top: 7px;
+    bottom: 5px;
     right: 40px;
     width: 31px;
     height: 36px;
@@ -1290,6 +1307,7 @@ img {
     top: 0;
     left: 0;
     background: url("../img/hit.svg");
+    z-index: 10;
 }
 
 .item-title {
@@ -1318,7 +1336,9 @@ img {
 
 .item-description img{
     width: 100%;
-    
+    position: absolute;
+    top: 0;
+    left: 0;
     border-radius: 50%;
 }
 
@@ -1338,7 +1358,7 @@ img {
     font-weight: 400;
     color: #323232; 
     border-radius: 15px;    
-    padding: 26px 20px;
+    padding: 25px 20px;
     margin-bottom: 40px;
     background: #f0e4cc url("../img/wafer-bg.jpg") repeat;    
 }
@@ -1412,19 +1432,24 @@ img {
 
 .news{    
     padding: 22px 20px;
-    height: 220px;
+    min-height: 220px;
     font-size: 16px;
     line-height: 22px;
     font-weight: 500;
     color: #5a5a5a;
-    background: #ffffff url(../img/strawberry-bg.jpg)no-repeat;
+    background-color: #ffffff; 
+    background-image: url(../img/strawberry-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
     border-radius: 14px;    
 }
 
 
 .wrap-subscription-form{
-    background: url(../img/post-bg.svg)no-repeat;
+    background-image: url(../img/post-bg.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
     min-height: 220px; 
     border-radius: 14px;
     padding: 4px;
@@ -1447,7 +1472,7 @@ img {
     background-color: #f8f7f4;
     border-radius: 14px;
     box-sizing: border-box;
-    height: 212px;
+    min-height: 212px;
     padding: 30px 22px; 
     padding-bottom: 35px;
     font-size: 16px;
@@ -1482,9 +1507,9 @@ img {
     color: #323232;    
 }
 
-
 .subscription-form p{
     margin: 0;
+    margin-bottom: 18px;
 }
 
 .subscription-form form{
@@ -1659,12 +1684,13 @@ img {
     list-style: none;
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex;    
-    width: 190px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 200px;
     margin: 0;
     padding: 0;
     padding-bottom: 5px;
-    list-style: none;
+    list-style: none;   
 }
 
 .footer-info{
@@ -1672,7 +1698,7 @@ img {
 }
 
 .developer{
-    width: 190px;   
+    width: 190px;    
 }
 
 .social-list a{
@@ -1788,20 +1814,20 @@ img {
     color: #ffbc9e;
 }
 
-.developer{
+.developer{       
     margin-left: 0;
+    padding-left: 10px;
     font-size: 12px;
     line-height: 18px;
     font-weight: 400; 
     color: #ffffff;       
 }
 
-.developer-logo{
+.developer-logo{    
     display: block;
 }
 
-
-.developer p{
+.developer p{    
     margin: 0;    
 }
 
