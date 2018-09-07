@@ -61,8 +61,7 @@ img {
 .page-wrap{
     width: 100%;    
     min-width: 900px;
-}
-        
+}        
 
 .index-bg-1{
     color: #ffffff;
@@ -128,7 +127,6 @@ img {
             box-shadow: inset 0px 2px 2px 0px rgba(148, 39, 24, 1);
 } 
 
-
 .area{
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
@@ -142,8 +140,25 @@ img {
     font-weight: 700;  
     padding: 0 13px;
     color: #000000;
-    background-color: #ffffff; 
-    
+    background-color: #ffffff;     
+}
+
+.area::-webkit-input-placeholder{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.area:-ms-input-placeholder{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.area::-ms-input-placeholder{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
 }
 
 .area::placeholder{
@@ -151,7 +166,6 @@ img {
     font-size: 16px;
     line-height: 24px;
 }
-
 
 .area:hover{
     border: 2px solid #c7c6c5;
@@ -168,8 +182,6 @@ img {
     padding-left: 2.25%;
     padding-right: 2.25%;    
 }
-
-/* ------------------------ HEADER ------------------------*/
 
 .header-navigation{
     position: relative;
@@ -268,8 +280,7 @@ img {
 .navigation-item .main-menu:hover {    
     text-decoration: none;
     color: #333333;
-    background-color: #f7f6f3;
-    
+    background-color: #f7f6f3;    
 }
 
 .navigation-item .main-menu:active{
@@ -298,7 +309,7 @@ img {
     padding-top: 4px;
     position: absolute;
     left: 0;
-    top: 30;    
+    top: 33px;    
 }
 
 .navigation-item ul{
@@ -337,7 +348,7 @@ img {
     margin-top: 22px;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
-            justify-content: flex-end;
+    justify-content: flex-end;
 }
 
 .user-block-point{
@@ -376,7 +387,6 @@ img {
     left: -305px;
 }
 
-
 .user-block-point:hover > .hover-line{
     display: block;
 }
@@ -396,7 +406,6 @@ img {
     padding-bottom: 9px;
     border-radius: 35px;    
 }
-
 
 .btn-login{
     margin-right: 7px;
@@ -520,7 +529,9 @@ img {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    align-items: flex-end;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
     width: 540px;
     height: 242px;    
     border-radius: 6px;
@@ -651,8 +662,7 @@ img {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     width: 83px;
-    padding-left: 14px;
-    
+    padding-left: 14px;    
 }
 
 .total-price{   
@@ -692,13 +702,10 @@ img {
     color: #ffffff;
 }
 
-/* ------------------------ MAIN ------------------------*/
-
 .main-slider{    
     width: 100%;
     position: relative;
-    overflow: hidden;   
-      
+    overflow: hidden; 
 }
 
 .slide{
@@ -732,13 +739,11 @@ img {
     margin-bottom: 30px;
 } 
 
-
 .slider-controls-wrap{
     position: absolute;
     bottom: 60px;
     left: 2.25%;
 }
-
 
 .slider-control {    
     width: 21px;
@@ -762,9 +767,7 @@ img {
 
 .other-slide:active{
     background-color: rgba(255, 255, 255, 1); 
-}
-
- 
+} 
 
 .btn-red-big{
     font-size: 32px;
@@ -800,7 +803,6 @@ img {
 .promo p{
     margin: 16px 0;
     margin-bottom: 45px;
-    
 }
 
 .promo b{
@@ -809,10 +811,14 @@ img {
     font-weight: 700;  
 }
 
-
 .promo{ 
+    display: -webkit-box; 
+    display: -ms-flexbox; 
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     padding-top: 15px; 
     padding-bottom: 20px;
     padding-left: 20px;
@@ -859,7 +865,6 @@ img {
     position: relative;
 }
 
-
 .breadcrumbs-point a{
     color: #ffffff;    
 }
@@ -886,8 +891,6 @@ img {
     margin: 0;
 }
 
-/* ---------- Фильтры ----------*/
-
 .filters-form-wrap{
     display: -webkit-box;    
     display: -ms-flexbox;    
@@ -909,7 +912,6 @@ img {
     margin-bottom: 6px;
     padding-left: 16px;
 }
-
 
 .top-filters{    
     display: -webkit-box;    
@@ -936,7 +938,7 @@ img {
 }
 
 .filter-type{
-    position: relative;  /**/
+    position: relative;  
     width: 193px;
 }
 
@@ -983,7 +985,6 @@ img {
     color: #000000;
     background-color: #ffffff;
 }
-
 
 .select-type-wrap:hover{
     color: #000000;
@@ -1051,8 +1052,6 @@ img {
     background-size: cover;
 }
 
-
-
 .min-price-switch{
    position: absolute;
     left: 32px;
@@ -1106,7 +1105,6 @@ img {
     background-image: url(../img/radio-on.svg);
 }
 
-
 .filter-fillers-list{
     margin: 0;
     padding: 0;
@@ -1114,8 +1112,11 @@ img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    align-items: flex-end;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
     padding: 9px 17px;
     border-radius: 17px;
     background-color: rgba(255, 255, 255, 0.2);  
@@ -1124,8 +1125,7 @@ img {
 .filter-fillers-item{
     position: relative;
     padding-left: 30px;
-    margin-left: 23px;
-   
+    margin-left: 23px;   
 }
 
 .filter-fillers-item:first-child{
@@ -1185,8 +1185,6 @@ img {
             box-shadow: inset 0px 3px 2px 0px rgba(105, 105, 105, 1);
 }
 
-/* ---------- Фильтры ----------*/
-
 .catalog-list{
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1224,8 +1222,7 @@ img {
     width: 100%;    
     position: relative;
     height: 0;
-    padding-top: 100%;
-    
+    padding-top: 100%;    
 }
 
 .product-price{
@@ -1256,7 +1253,6 @@ img {
     height: 36px;
     background:  url("../img/ruble.svg");
 }
-
 
 .catalog-item::after{
     content: "";
@@ -1297,7 +1293,11 @@ img {
 }
 
 .catalog-item:hover > .fast-view{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
     justify-content: center;
 }
 
@@ -1345,8 +1345,7 @@ img {
 }
 
 .catalog-item p{
-    margin: 0;
-    
+    margin: 0;    
 }
 
 .advantages-list{
@@ -1374,7 +1373,8 @@ img {
 }
 
 .advantages{
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     width: 48.85%;
     position: relative; 
     padding-left: 57px;
@@ -1427,7 +1427,6 @@ img {
     background-image: url(../img/thermometer.svg); 
 }
 
-
 .user-content{
     margin-bottom: 20px;
 }
@@ -1447,7 +1446,6 @@ img {
     border-radius: 14px;    
 }
 
-
 .wrap-subscription-form{
     background-image: url(../img/post-bg.svg);
     background-size: cover;
@@ -1456,7 +1454,6 @@ img {
     border-radius: 14px;
     padding: 4px;
 }
-
 
 .subscription-form{
     position: relative;
@@ -1473,19 +1470,23 @@ img {
     color: #5a5a5a;    
     background-color: #f8f7f4;
     border-radius: 14px;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     min-height: 212px;
     padding: 30px 22px; 
     padding-bottom: 35px;
     font-size: 16px;
     line-height: 22px;
-    font-weight: 400;
-    
+    font-weight: 400;    
 }
 
 .wrap-subscription-form form{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
 }
 
 .wrap-subscription-form .area{    
@@ -1520,11 +1521,9 @@ img {
     display: flex;
 }
 
-
 .subscription-form .btn-red{
     margin-left: auto;
 }
-
 
 .map{
     position: relative; 
@@ -1578,7 +1577,6 @@ img {
     font-weight: 700; 
     margin-bottom: 20px;
 }
-
 
 .phone-map{
     display: inline-block;
@@ -1665,8 +1663,6 @@ img {
     background-color: #ffffff;  
 }
 
-/* ------------------------ FOOTER ------------------------*/
-
 .main-footer{
     border-top: 1px solid rgba(255, 255, 255, 0.3);
     display: -webkit-box;
@@ -1687,7 +1683,8 @@ img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     width: 200px;
     margin: 0;
     padding: 0;
@@ -1774,7 +1771,6 @@ img {
             justify-content: flex-start;
 }
 
-
 .footer-info-list li{
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
@@ -1841,9 +1837,6 @@ img {
 .developer-name:active{
     color: #ffbc9e;
 }
-
-
-/* ------------------------ POPUP ------------------------*/
 
 .popup-overlay{
     display: none;
