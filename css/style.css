@@ -231,7 +231,8 @@ img {
 
 .header-info{
     width: 170px;
-    margin-left:auto;
+    margin-left:auto;    
+    z-index: 9;
 }
 
 .navigation-item .main-menu{
@@ -857,13 +858,14 @@ img {
 .breadcrumbs-list{
     position: relative;
     z-index: 8;
+    width: 640px;
     display: -webkit-box;              
     display: -ms-flexbox;              
     display: flex;
     margin: 0;
     margin-top: -16px;
     padding: 0;
-    list-style: none;
+    list-style: none;   
 }
 
 .breadcrumbs-point{
@@ -1093,7 +1095,7 @@ img {
     padding-left: 33px;
 }
 
-.radio-indicator::before{
+.filter-fat-option label::before{
     content: "";
     position: absolute;    
     width: 25px;
@@ -1101,10 +1103,10 @@ img {
     left: -5px;
     top: -3px;
     background-image: url(../img/radio-off.svg);
-    opacity: 0.8;
+    opacity: 0.8;   
 }
 
-.filter-fat-option input[type="radio"]:checked ~ .radio-indicator:before{
+.filter-fat-option input[type="radio"]:checked ~ .radio-indicator::before{
     content: "";
     position: absolute;
     width: 25px;
@@ -1114,7 +1116,8 @@ img {
     background-image: url(../img/radio-on.svg);
 }
 
-.radio-indicator:hover::before{
+.filter-fat-option label:hover::before{
+    cursor: pointer;
     opacity: 1;
 }
 
@@ -1151,7 +1154,7 @@ img {
     margin-top: 15px;
 }
 
-.checbox-indicator::before{
+.filter-fillers-item label::before{
     content: "";
     position: absolute;
     width: 23px;
@@ -1159,10 +1162,10 @@ img {
     left: -2px;
     top: -2px;
     background-image: url(../img/checkbox-off.svg);
-    opacity: 0.8;
+    opacity: 0.8;   
 }
 
-.filter-fillers-item input[type="checkbox"]:checked ~ .checbox-indicator:before{
+.filter-fillers-item input[type="checkbox"]:checked ~ .checbox-indicator::before{
     content: "";
     position: absolute;
     width: 27px;
@@ -1170,10 +1173,12 @@ img {
     left: -2px;
     top: -2px;
     background-image: url(../img/checkbox-on.svg);
+    opacity: 0.8;   
 }
 
-.checbox-indicator:hover::before{
+.filter-fillers-item label:hover::before{
     opacity: 1;
+    cursor: pointer;
 }
 
 .filters-button{
@@ -1626,13 +1631,13 @@ img {
         -ms-flex-pack: end; 
             justify-content: flex-end;
     margin: 0;
-    padding: 0 20px;
+    padding: 0;
     list-style: none;
     position: relative;
     font-size: 16px;
     line-height: 18px;
     font-weight: 500;
-    margin-right: -29px;
+    margin-right: -9px;
     margin-bottom: 28px;
 }
 
