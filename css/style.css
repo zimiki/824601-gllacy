@@ -285,8 +285,8 @@ img {
 
 .navigation-item .main-menu:active{
   background-color: #ededed;
-  -webkit-box-shadow: inset 0px 2px 1px 0px rgba(105, 105, 105, 1);
-          box-shadow: inset 0px 2px 1px 0px rgba(105, 105, 105, 1);  
+  -webkit-box-shadow: inset 0px 2px 1px 0px #696969;
+          box-shadow: inset 0px 2px 1px 0px #696969;  
 }
 
 .type-navigation a:active{
@@ -336,6 +336,16 @@ img {
 
 .type-navigation a:hover{
     background-color: #fbded7;    
+    border-radius: 0;
+}
+
+.type-navigation a:active{
+    background-color: #f6b5a5;    
+    border-radius: 0;
+}
+
+.type-navigation .curent-type{
+    background-color: #d07058;    
     border-radius: 0;
 }
 
@@ -1037,19 +1047,17 @@ img {
 
 .range-bar-switch{
     cursor: pointer;
-    z-index: 7;
-    width: 20px;
-    height: 23px;     
-    background-image: url(../img/filter-button.svg);
-}
-
-.range-bar-switch:hover{
-    cursor: pointer;
-    z-index: 7;
+    z-index: 10;
     width: 23px;
     height: 25px;     
     background-image: url(../img/filter-button.svg);
-    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.range-bar-switch:hover{
+    background-image: url(../img/filter-button.svg);
+    background-size: contain;
 }
 
 .min-price-switch{
@@ -1093,6 +1101,7 @@ img {
     left: -5px;
     top: -3px;
     background-image: url(../img/radio-off.svg);
+    opacity: 0.8;
 }
 
 .filter-fat-option input[type="radio"]:checked ~ .radio-indicator:before{
@@ -1103,6 +1112,10 @@ img {
     left: -5px;
     top: -3px;
     background-image: url(../img/radio-on.svg);
+}
+
+.radio-indicator:hover::before{
+    opacity: 1;
 }
 
 .filter-fillers-list{
@@ -1146,6 +1159,7 @@ img {
     left: -2px;
     top: -2px;
     background-image: url(../img/checkbox-off.svg);
+    opacity: 0.8;
 }
 
 .filter-fillers-item input[type="checkbox"]:checked ~ .checbox-indicator:before{
@@ -1156,6 +1170,10 @@ img {
     left: -2px;
     top: -2px;
     background-image: url(../img/checkbox-on.svg);
+}
+
+.checbox-indicator:hover::before{
+    opacity: 1;
 }
 
 .filters-button{
@@ -1317,12 +1335,14 @@ img {
         -ms-flex-order: 1;
             order: 1;
     margin: 0;
-    margin-top: 8px;
+    margin-top: 15px;
     width: 100%;
 }
 
 .item-title a{
-    display: inline-block;    
+    display: inline-block;
+    box-sizing: border-box;
+    width: 100%;
     text-align: center;
     vertical-align: top;
     font-size: 16px;
@@ -1330,6 +1350,11 @@ img {
     font-weight: 500;
     color: #ffffff;    
     padding: 0 5px;
+}
+
+.item-title a:hover,
+.item-title a:active{
+    color: #ffbc9e;
 }
 
 .item-description{
@@ -1590,7 +1615,7 @@ img {
 }
 
 .pagination{
-    margin-top: 48px;    
+    margin-top: 43px;    
 }
 
 .pagination-list{
@@ -1607,6 +1632,7 @@ img {
     font-size: 16px;
     line-height: 18px;
     font-weight: 500;
+    margin-right: -29px;
     margin-bottom: 28px;
 }
 
@@ -1632,14 +1658,18 @@ img {
 }
 
 .pagination-item-prev a,
-.pagination-item-next a{
+.pagination-item-next a,
+.pagination-item-no-prev a,
+.pagination-item-no-next a{
     display: block;
     width: 28px;
     height: 28px;
     cursor: pointer;
+    border-radius: 50%;   
 }
 
-.pagination-item-prev{
+.pagination-item-prev,
+.pagination-item-no-prev{
     background-image: url(../img/prev.svg); 
     background-repeat: no-repeat;
     background-position: center; 
@@ -1648,19 +1678,26 @@ img {
             transform: rotate(180deg);  
 }
 
-.pagination-item-next{
+.pagination-item-next,
+.pagination-item-no-next{
     background-image: url(../img/next.svg);
     background-repeat: no-repeat;
-    background-position: center;    
+    background-position: center;
 }
 
-.pagination-item a:hover{
+.pagination-item a:hover,
+.pagination-item-next a:hover,
+.pagination-item-prev a:hover{
     background-color: rgba(255, 255, 255, 0.2);
 }
 
 .pagination-item a:active{
     color: #323232;
     background-color: #ffffff;  
+}
+
+.pagination-list li:last-child{
+    margin-left: 5px;
 }
 
 .main-footer{
@@ -1751,9 +1788,7 @@ img {
 .social-btn-inst:active,
 .social-btn-fb:active,
 .social-btn-vk:active{
-    opacity: 0.8;
-    -webkit-box-shadow: inset 0px 2px 1px 0px rgba(136, 136, 136, 1);
-            box-shadow: inset 0px 2px 1px 0px rgba(136, 136, 136, 1);
+    opacity: 0.8;   
 }
 
 .footer-info-list {
