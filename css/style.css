@@ -335,19 +335,21 @@ img {
     display: block; 
 }
 
+.curent-type a{
+    color: #ffffff;
+    background-color: #d07058;    
+    border-radius: 0;
+}
+
 .type-navigation a:hover{
+    color: #000000;
     background-color: #fbded7;    
     border-radius: 0;
 }
 
 .type-navigation a:active{
+    color: #000000;
     background-color: #f6b5a5;    
-    border-radius: 0;
-}
-
-.type-navigation .curent-type{
-    color: #ffffff;
-    background-color: #d07058;    
     border-radius: 0;
 }
 
