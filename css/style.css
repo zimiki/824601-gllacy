@@ -346,6 +346,7 @@ img {
 }
 
 .type-navigation .curent-type{
+    color: #ffffff;
     background-color: #d07058;    
     border-radius: 0;
 }
