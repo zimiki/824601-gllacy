@@ -320,10 +320,10 @@ img {
 
 .hover-line{
     display: none;
-    padding-top: 4px;
+    padding-top: 8px;
     position: absolute;
     left: 0;
-    top: 33px;    
+    top: 29px;    
 }
 
 .navigation-item ul{
