@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
       <link href="css/normalize.css" rel="stylesheet"> 
-      <link href="css/style.css" rel="stylesheet"> 
+      <link href="css/style-mini.css" rel="stylesheet"> 
   </head>
  
 <body>
@@ -45,19 +45,21 @@
                <div class="user-block-point">
                     <a class="user-block-btn btn-login" href="#">Вход <span class="visually-hidden">в личный кабинет</span></a>
                     <div class="hover-line position-login-form">
-                      <div class="login-form-wrap">
-                         <form action="https://echo.htmlacademy.ru" method="post" name="login-form" >
-                            <input class="area" type="email" name="login-email" placeholder="Электронная почта" aria-label="Ваша электронная почта">
-                            <input class="area" type="password" name="login-password" placeholder="Пароль"  aria-label="Ваш пароль">
-                            <button class="btn-red" type="submit">Войти</button>
-                            <div class="login-form-option">                        
-                                <a href="#">Забыли пароль?</a>
-                                <a href="#">Новая регистрация</a>
-                            </div>
-                         </form>  
-                      </div>
+                        <div class="login-form-wrap">                        
+                             <form action="https://echo.htmlacademy.ru" method="post" name="login-form" >
+                                <input class="area" type="email" name="login-email" placeholder="Электронная почта" aria-label="Ваша электронная почта">
+                                <input class="area" type="password" name="login-password" placeholder="Пароль"  aria-label="Ваш пароль">
+                                <div class="login-form-option">
+                                    <button class="btn-red" type="submit">Войти</button>
+                                    <div class="login-form-option-item">                        
+                                        <a href="#">Забыли пароль?</a>
+                                        <a href="#">Новая регистрация</a> 
+                                    </div>
+                                </div>
+                           </form>  
+                        </div>
                     </div>
-                </div>  
+                </div>
             
                 <div class="user-block-point">
                     <a class="user-block-btn btn-cart-noempty" href="#"><span class="visually-hidden">в корзине</span>2 товара</a>
