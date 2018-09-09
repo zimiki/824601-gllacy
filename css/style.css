@@ -144,7 +144,8 @@ img {
     font-weight: 700;  
     padding: 9px 13px;
     color: #000000;
-    background-color: #ffffff;     
+    background-color: #ffffff;
+    font-weight: 500;
 }
 
 .area::-webkit-input-placeholder{
@@ -1999,5 +2000,10 @@ img {
 
 .feedback-area2{
     padding-top: 12px;
+    height: 155px;
+}
+
+.feedback-area2:hover{
+    padding-top: 11px;
     height: 155px;
 }
